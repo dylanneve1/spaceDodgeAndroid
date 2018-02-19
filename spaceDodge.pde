@@ -4,6 +4,9 @@ Troid troid;
 
 void setup()
 {
+  menu = new Menus();
+  player = new Player();
+  troid = new Troid();
   size(500, 500);
 }
 

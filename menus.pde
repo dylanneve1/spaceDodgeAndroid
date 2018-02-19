@@ -18,9 +18,11 @@ class Menus
 
   void menu()
   {
+    // Meh I'll do it later lol.
   }
 
   void game()
   {
+    background(0);
   }
 }
