@@ -9,9 +9,8 @@ class Flares {
   float yspeed;
 
   Flares() {
-    x  = random(width);
-    y  = random(-500, -50);
-    z  = random(0, 20);
+    x  = random(displayWidth);
+    y  = random(displayHeight/-1, displayHeight*-0.1);
     len = map(z, 0, 20, 10, 20);
     yspeed  = map(z, 0, 20, 1, 20);
   }
