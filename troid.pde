@@ -58,6 +58,7 @@ class Troid {
     if (collided == true)
     {
       player.lives -= 1;
+      background(255, 0, 0);
       collided = false;
     }
   }

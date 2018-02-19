@@ -24,6 +24,8 @@ class Menus
   void game()
   {
     background(0);
+    textAlign(CENTER);
+    text("Lives : " + player.lives, 250, 250);
     player.caller();
     for (int i = 0; i < troid.length; i++) {
       troid[i].fall();
