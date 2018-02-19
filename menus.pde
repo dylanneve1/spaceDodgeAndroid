@@ -23,7 +23,7 @@ class Menus
 
   void game()
   {
-    //background(0);
+    background(0);
     player.caller();
     for (int i = 0; i < troid.length; i++) {
       troid[i].fall();
