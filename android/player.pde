@@ -4,8 +4,8 @@
 class Player
 {
 
-  float x = 250;
-  float y = 450;
+  float x = displayWidth/2;
+  float y = displayHeight*0.9;
 
   float leftEdge;
   float rightEdge;
@@ -13,6 +13,8 @@ class Player
   float bottomEdge;
 
   int lives = 10;
+
+  float r = displayHeight*0.1;
 
   void caller()
   {
@@ -27,7 +29,7 @@ class Player
     noStroke();
     fill(255);
     rectMode(CENTER);
-    rect(x, y, 50, 50);
+    rect(x, y, r, r);
   }
 
   void move()
@@ -36,18 +38,18 @@ class Player
     {
       if (key == 'a')
       {
-        x -= 5;
+        x -= displayWidth*0.01;
       }
       if (key == 'd')
       {
-        x += 5;
+        x += displayWidth*0.01;
       }
       if (leftEdge <= 0)
       {
-        x += 5;
+        x += displayWidth*0.01;
       } else if (rightEdge >= 500)
       {
-        x -= 5;
+        x -= displayWidth*0.01;
       }
     }
   }
@@ -63,9 +65,9 @@ class Player
 
   void edgeDetect()
   {
-    leftEdge = x - 25;
-    rightEdge = x + 25;
-    topEdge = y - 25;
-    bottomEdge = y + 25;
+    leftEdge = x - r/2;
+    rightEdge = x + r/2;
+    topEdge = y - r/2;
+    bottomEdge = y + r/2;
   }
 }
