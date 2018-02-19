@@ -24,5 +24,6 @@ class Menus
   void game()
   {
     background(0);
+    player.caller();
   }
 }
