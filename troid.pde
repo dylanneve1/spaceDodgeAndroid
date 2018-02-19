@@ -28,6 +28,7 @@ class Troid {
   {
     strokeWeight(2);
     stroke(138, 43, 226);
+    fill(0, 200, 0);
     rectMode(CENTER);
     rect(x, y, 60, 20);
   }

@@ -21,6 +21,7 @@ class Player
   void show()
   {
     noStroke();
+    fill(255);
     rectMode(CENTER);
     rect(x, y, 50, 50);
   }
