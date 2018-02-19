@@ -30,6 +30,7 @@ class Menus
       troid[i].show();
       troid[i].edgeDetect();
       troid[i].collide();
+      troid[i].boop();
     }
   }
 }

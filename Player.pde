@@ -9,6 +9,8 @@ class Player
   float topEdge;
   float bottomEdge;
 
+  int lives = 10;
+
   void caller()
   {
     show();
@@ -46,6 +48,7 @@ class Player
 
   void edgeDetect()
   {
+    text(lives, 250, 250);
     leftEdge = x - 25;
     rightEdge = x + 25;
     topEdge = y - 25;

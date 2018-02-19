@@ -9,6 +9,9 @@ class Troid {
   float topEdge;
   float bottomEdge;
 
+  boolean notYetTapped = true;
+  boolean collided = false;
+
   Troid() 
   {
     x  = random(width);
@@ -38,9 +41,23 @@ class Troid {
 
   void collide()
   {
-    if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge)
+    if (notYetTapped == true)
     {
-      background(255);
+      if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge)
+      {
+        //background(255);
+        collided = true;
+        notYetTapped = false;
+      }
+    }
+  }
+
+
+  void boop()
+  {
+    if (collided == true)
+    {
+      player.lives -= 1;
     }
   }
 }
