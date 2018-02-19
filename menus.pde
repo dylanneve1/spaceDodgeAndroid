@@ -3,7 +3,7 @@ class Menus
 
   boolean menuActive = false;
   boolean gameActive = true;
-  
+
   void caller()
   {
     if (menuActive == true)
@@ -23,7 +23,12 @@ class Menus
 
   void game()
   {
-    background(0);
+    //background(0);
     player.caller();
+    for (int i = 0; i < troid.length; i++) {
+      troid[i].fall();
+      troid[i].show();
+      troid[i].collide();
+    }
   }
 }
