@@ -9,10 +9,6 @@ class Menu {
     spaceBackground = loadImage("space.jpg");
     if(menuShow == true) {
       image(spaceBackground, -380, 0);
-      textSize(50);
-      text("Space Invaders", 80, 120);
-      textSize(30);
-      text("Press R to start", 140, 200);
     }
     if(keyPressed == true) {
       if(key == 'r') {
