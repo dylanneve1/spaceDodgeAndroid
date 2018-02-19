@@ -3,6 +3,7 @@ class Menus
 
   boolean menuActive = true;
   boolean gameActive = false;
+  boolean dead = false;
 
   void caller()
   {
@@ -13,6 +14,10 @@ class Menus
     if (gameActive == true)
     {
       game();
+    }
+    if (dead == true)
+    {
+      dead();
     }
   }
 
@@ -25,7 +30,7 @@ class Menus
     text("SPACE DODGE", 250, 225);
     textSize(15);
     text("Tap to play...", 250, 275);
-    if(mousePressed == true)
+    if (mousePressed == true)
     {
       menuActive = false;
       gameActive = true;
@@ -45,6 +50,24 @@ class Menus
       troid[i].edgeDetect();
       troid[i].collide();
       troid[i].boop();
+    }
+  }
+
+  void dead()
+  {
+    background(255, 0, 0);
+    textSize(30);
+    fill(0);
+    textAlign(CENTER);
+    text("YOU DIED :P", 250, 250);
+    textSize(15);
+    text("Tap to return to restart...", 250, 275);
+    player.lives = 10;
+    if (mousePressed == true)
+    {
+      menuActive = true;
+      gameActive = false;
+      dead = false;
     }
   }
 }

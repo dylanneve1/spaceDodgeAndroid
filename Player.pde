@@ -16,6 +16,7 @@ class Player
     show();
     move();
     edgeDetect();
+    dead();
   }
 
   void show()
@@ -45,6 +46,15 @@ class Player
       {
         x -= 5;
       }
+    }
+  }
+
+  void dead()
+  {
+    if(lives == -1)
+    {
+      menu.gameActive = false;
+      menu.dead = true;
     }
   }
 
