@@ -1,12 +1,14 @@
 Menus menu;
 Player player;
-Troid troid;
+Troid[] troid = new Troid[1000];
 
 void setup()
 {
   menu = new Menus();
   player = new Player();
-  troid = new Troid();
+  for (int i = 0; i < troid.length; i++) {
+    troid[i] = new Troid();
+  }
   size(500, 500);
 }
 
