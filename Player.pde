@@ -51,7 +51,7 @@ class Player
 
   void dead()
   {
-    if(lives == -1)
+    if (lives == -1)
     {
       menu.gameActive = false;
       menu.dead = true;

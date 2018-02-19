@@ -44,6 +44,10 @@ class Menus
     fill(255);
     text("Lives : " + player.lives, 250, 100);
     player.caller();
+    for (int i = 0; i < flares.length; i++) {
+      flares[i].fall();
+      flares[i].show();
+    }
     for (int i = 0; i < troid.length; i++) {
       troid[i].fall();
       troid[i].show();
