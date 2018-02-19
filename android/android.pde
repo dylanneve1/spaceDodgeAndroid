@@ -17,7 +17,8 @@ void setup()
   for (int i = 0; i < flares.length; i++) {
     flares[i] = new Flares();
   }
-  size(500, 500);
+  size(displayWidth, displayHeight);
+  orientation(PORTRAIT);
 }
 
 void draw()
