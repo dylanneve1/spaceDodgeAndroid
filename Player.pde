@@ -6,6 +6,8 @@ class Player
 
   float leftEdge;
   float rightEdge;
+  float topEdge;
+  float bottomEdge;
 
   void caller()
   {
@@ -46,5 +48,7 @@ class Player
   {
     leftEdge = x - 25;
     rightEdge = x + 25;
+    topEdge = y - 25;
+    bottomEdge = y + 25;
   }
 }

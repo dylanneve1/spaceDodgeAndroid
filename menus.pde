@@ -28,6 +28,7 @@ class Menus
     for (int i = 0; i < troid.length; i++) {
       troid[i].fall();
       troid[i].show();
+      troid[i].edgeDetect();
       troid[i].collide();
     }
   }

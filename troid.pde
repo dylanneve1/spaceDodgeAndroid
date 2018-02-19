@@ -1,14 +1,18 @@
 class Troid {
+
   float x;
   float y;
-  float z;
   float yspeed = 6;
+
+  float rightEdge;
+  float leftEdge;
+  float topEdge;
+  float bottomEdge;
 
   Troid() 
   {
     x  = random(width);
     y  = random(-100000, -50);
-    z  = random(0, 20);
   }
 
   void fall() 
@@ -20,7 +24,16 @@ class Troid {
   {
     strokeWeight(2);
     stroke(138, 43, 226);
+    rectMode(CENTER);
     rect(x, y, 60, 20);
+  }
+
+  void edgeDetect()
+  {
+    leftEdge = x - 30;
+    rightEdge = x + 30;
+    topEdge = y - 10;
+    bottomEdge = y + 10;
   }
 
   void collide()
