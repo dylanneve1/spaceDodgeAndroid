@@ -21,6 +21,7 @@ class Troid {
   void fall() 
   {
     y = y + yspeed;
+    yspeed = yspeed + 0.001;
   }
 
   void show() 

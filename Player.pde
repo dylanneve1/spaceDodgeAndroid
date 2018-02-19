@@ -20,6 +20,7 @@ class Player
 
   void show()
   {
+    noStroke();
     rectMode(CENTER);
     rect(x, y, 50, 50);
   }
