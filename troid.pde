@@ -38,5 +38,9 @@ class Troid {
 
   void collide()
   {
+    if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge)
+    {
+      background(255);
+    }
   }
 }
