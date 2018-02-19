@@ -1,3 +1,5 @@
+// Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
+
 class Flares {
   float x;
   float y;

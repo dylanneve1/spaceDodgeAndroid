@@ -1,3 +1,5 @@
+// Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
+
 Menus menu;
 Player player;
 Troid[] troid = new Troid[1000];
