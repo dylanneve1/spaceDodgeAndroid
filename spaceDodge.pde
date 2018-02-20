@@ -1,13 +1,15 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
-// Android version
 
 Menus menu;
 Player player;
 Troid[] troid = new Troid[1000];
-Flares[] flares = new Flares[100];
+Flares[] flares = new Flares[50];
+
+PImage nebula;
 
 void setup()
 {
+  nebula = loadImage("nebula.jpg");
   menu = new Menus();
   frameRate(60);
   player = new Player();
@@ -17,8 +19,7 @@ void setup()
   for (int i = 0; i < flares.length; i++) {
     flares[i] = new Flares();
   }
-  size(displayWidth, displayHeight);
-  orientation(PORTRAIT);
+  size(500, 500);
 }
 
 void draw()

@@ -1,5 +1,4 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
-// Android version
 
 class Troid {
 
@@ -23,8 +22,8 @@ class Troid {
 
   void fall() 
   {
-    y = y + yspeed;
-    yspeed = yspeed + 0.001;
+    y += yspeed;
+    yspeed += 0.001;
   }
 
   void show() 
@@ -33,13 +32,13 @@ class Troid {
     stroke(138, 43, 226);
     fill(0, 200, 0);
     rectMode(CENTER);
-    rect(x, y, 60, 20);
+    rect(x, y, 20, 20);
   }
 
   void edgeDetect()
   {
-    leftEdge = x - 30;
-    rightEdge = x + 30;
+    leftEdge = x - 10;
+    rightEdge = x + 10;
     topEdge = y - 10;
     bottomEdge = y + 10;
   }

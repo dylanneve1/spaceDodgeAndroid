@@ -1,5 +1,4 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
-// Android version
 
 class Flares {
   float x;
@@ -9,8 +8,9 @@ class Flares {
   float yspeed;
 
   Flares() {
-    x  = random(displayWidth);
-    y  = random(displayHeight/-1, displayHeight*-0.1);
+    x  = random(width);
+    y  = random(-500, -50);
+    z  = random(0, 20);
     len = map(z, 0, 20, 10, 20);
     yspeed  = map(z, 0, 20, 1, 20);
   }

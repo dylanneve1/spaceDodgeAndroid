@@ -1,11 +1,10 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
-// Android version
 
 class Player
 {
 
-  float x = displayWidth/2;
-  float y = displayHeight*0.9;
+  float x = 250;
+  float y = 450;
 
   float leftEdge;
   float rightEdge;
@@ -14,7 +13,8 @@ class Player
 
   int lives = 10;
 
-  float r = displayHeight*0.1;
+  int score = 0;
+  int highScore = 0;
 
   void caller()
   {
@@ -29,7 +29,8 @@ class Player
     noStroke();
     fill(255);
     rectMode(CENTER);
-    rect(x, y, r, r);
+    rect(x, y, 50, 50);
+    score += 1;
   }
 
   void move()
@@ -38,18 +39,18 @@ class Player
     {
       if (key == 'a')
       {
-        x -= displayWidth*0.01;
+        x -= 5;
       }
       if (key == 'd')
       {
-        x += displayWidth*0.01;
+        x += 5;
       }
       if (leftEdge <= 0)
       {
-        x += displayWidth*0.01;
+        x += 5;
       } else if (rightEdge >= 500)
       {
-        x -= displayWidth*0.01;
+        x -= 5;
       }
     }
   }
@@ -58,6 +59,8 @@ class Player
   {
     if (lives == -1)
     {
+      highScore = score;
+      score = 0;
       menu.gameActive = false;
       menu.dead = true;
     }
@@ -65,9 +68,9 @@ class Player
 
   void edgeDetect()
   {
-    leftEdge = x - r/2;
-    rightEdge = x + r/2;
-    topEdge = y - r/2;
-    bottomEdge = y + r/2;
+    leftEdge = x - 25;
+    rightEdge = x + 25;
+    topEdge = y - 25;
+    bottomEdge = y + 25;
   }
 }
