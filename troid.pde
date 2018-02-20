@@ -4,7 +4,7 @@ class Troid {
 
   float x;
   float y;
-  float yspeed = 6;
+  float yspeed = displayHeight*0.012;
 
   float rightEdge;
   float leftEdge;
@@ -14,16 +14,18 @@ class Troid {
   boolean notYetTapped = true;
   boolean collided = false;
 
+  float r = displayHeight*0.04;
+
   Troid() 
   {
     x  = random(width);
-    y  = random(-100000, -50);
+    y  = random(displayHeight*-1, displayHeight*-0.1);
   }
 
   void fall() 
   {
     y += yspeed;
-    yspeed += 0.001;
+    //yspeed += displayHeight*0.000006;
   }
 
   void show() 
@@ -32,15 +34,15 @@ class Troid {
     stroke(138, 43, 226);
     fill(0, 200, 0);
     rectMode(CENTER);
-    rect(x, y, 20, 20);
+    rect(x, y, r, r);
   }
 
   void edgeDetect()
   {
-    leftEdge = x - 10;
-    rightEdge = x + 10;
-    topEdge = y - 10;
-    bottomEdge = y + 10;
+    leftEdge = x - r/2;
+    rightEdge = x + r/2;
+    topEdge = y - r/2;
+    bottomEdge = y + r/2;
   }
 
   void collide()
