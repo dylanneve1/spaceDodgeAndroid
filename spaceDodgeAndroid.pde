@@ -5,11 +5,12 @@ Player player;
 Troid[] troid = new Troid[1000];
 Flares[] flares = new Flares[50];
 
-PImage nebula;
+//PImage nebula;
 
 void setup()
 {
-  nebula = loadImage("nebula.jpg");
+  orientation(PORTRAIT);
+  //nebula = loadImage("nebula.jpg");
   menu = new Menus();
   frameRate(60);
   player = new Player();
@@ -19,7 +20,7 @@ void setup()
   for (int i = 0; i < flares.length; i++) {
     flares[i] = new Flares();
   }
-  size(500, 500);
+  size(displayWidth, displayHeight);
 }
 
 void draw()
