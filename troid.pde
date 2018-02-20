@@ -19,7 +19,7 @@ class Troid {
   Troid() 
   {
     x  = random(width);
-    y  = random(displayHeight*-1000, displayHeight*-0.1);
+    y  = random(displayHeight*-100, displayHeight*-0.1);
   }
 
   void fall() 
