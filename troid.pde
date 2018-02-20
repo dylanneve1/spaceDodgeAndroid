@@ -13,7 +13,7 @@ class Troid {
 
   boolean notYetTapped = true;
   boolean collided = false;
-  
+
   Troid() 
   {
     x  = random(width);
