@@ -13,6 +13,9 @@ class Player
 
   int lives = 10;
 
+  int score = 0;
+  int highScore = 0;
+
   void caller()
   {
     show();
@@ -27,6 +30,7 @@ class Player
     fill(255);
     rectMode(CENTER);
     rect(x, y, 50, 50);
+    score += 1;
   }
 
   void move()
@@ -55,6 +59,8 @@ class Player
   {
     if (lives == -1)
     {
+      highScore = score;
+      score = 0;
       menu.gameActive = false;
       menu.dead = true;
     }

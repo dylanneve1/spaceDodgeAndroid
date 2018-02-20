@@ -45,6 +45,8 @@ class Menus
     textAlign(CENTER);
     fill(255);
     text("Lives : " + player.lives, 250, 100);
+    text("Score : " + player.score, 250, 125);
+    text("High score : " + player.highScore, 250, 150);
     player.caller();
     for (int i = 0; i < flares.length; i++) {
       flares[i].fall();
