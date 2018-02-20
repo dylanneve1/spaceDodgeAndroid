@@ -28,10 +28,10 @@ class Menus
     background(0);
     textAlign(CENTER);
     fill(255);
-    textSize(30);
-    text("SPACE DODGE", 250, 225);
-    textSize(15);
-    text("Tap to play...", 250, 275);
+    textSize(displayHeight*0.06);
+    text("SPACE DODGE", displayWidth/2, displayHeight*0.45);
+    textSize(displayHeight*0.03);
+    text("Tap to play...", displayWidth/2, displayHeight*0.55);
     if (mousePressed == true)
     {
       menuActive = false;
@@ -44,9 +44,9 @@ class Menus
     background(0);
     textAlign(CENTER);
     fill(255);
-    text("Lives : " + player.lives, 250, 100);
-    text("Score : " + player.score, 250, 125);
-    text("High score : " + player.highScore, 250, 150);
+    text("Lives : " + player.lives, displayWidth/2, displayHeight*0.2);
+    text("Score : " + player.score, displayWidth/2, displayHeight*0.25);
+    text("High score : " + player.highScore, displayWidth/2, displayHeight*0.3);
     player.caller();
     for (int i = 0; i < flares.length; i++) {
       flares[i].fall();
@@ -64,12 +64,12 @@ class Menus
   void dead()
   {
     background(255, 0, 0);
-    textSize(30);
+    textSize(displayHeight*0.06);
     fill(0);
     textAlign(CENTER);
-    text("YOU DIED :P", 250, 250);
-    textSize(15);
-    text("Tap to return to restart...", 250, 275);
+    text("YOU DIED :P", displayWidth/2, displayHeight/2);
+    textSize(displayHeight*0.03);
+    text("Tap to return to restart...", displayWidth/2, displayHeight*0.55);
     player.lives = 10;
     if (mousePressed == true)
     {
