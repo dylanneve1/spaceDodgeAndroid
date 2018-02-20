@@ -6,6 +6,8 @@ class Menus
   boolean menuActive = true;
   boolean gameActive = false;
   boolean dead = false;
+  
+  boolean spawnTroid = false;
 
   void caller()
   {
@@ -52,12 +54,15 @@ class Menus
       flares[i].fall();
       flares[i].show();
     }
-    for (int i = 0; i < troid.length; i++) {
-      troid[i].fall();
-      troid[i].show();
-      troid[i].edgeDetect();
-      troid[i].collide();
-      troid[i].boop();
+    if (spawnTroid == true)
+    {
+      for (int i = 0; i < troid.length; i++) {
+        troid[i].fall();
+        troid[i].show();
+        troid[i].edgeDetect();
+        troid[i].collide();
+        troid[i].boop();
+      }
     }
   }
 
