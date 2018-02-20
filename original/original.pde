@@ -3,10 +3,13 @@
 Menus menu;
 Player player;
 Troid[] troid = new Troid[1000];
-Flares[] flares = new Flares[100];
+Flares[] flares = new Flares[50];
+
+PImage nebula;
 
 void setup()
 {
+  nebula = loadImage("nebula.jpg");
   menu = new Menus();
   frameRate(60);
   player = new Player();
