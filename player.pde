@@ -35,22 +35,15 @@ class Player
 
   void move()
   {
-    if (keyPressed == true)
+    if (mousePressed == true)
     {
-      if (key == 'a')
+      if (mouseX > displayWidth/2)
       {
-        x -= 5;
+        x += displayWidth*0.02;
       }
-      if (key == 'd')
+      if (mouseX < displayWidth/2)
       {
-        x += 5;
-      }
-      if (leftEdge <= 0)
-      {
-        x += 5;
-      } else if (rightEdge >= 500)
-      {
-        x -= 5;
+        x -= displayWidth*0.02;
       }
     }
   }
