@@ -3,8 +3,8 @@
 class Player
 {
 
-  float x = 250;
-  float y = 450;
+  float x = displayWidth/2;
+  float y = displayHeight*0.9;
 
   float leftEdge;
   float rightEdge;
@@ -15,6 +15,10 @@ class Player
 
   int score = 0;
   int highScore = 0;
+  
+  float playerLength = displayWidth*0.1;
+
+  float move = displayWidth*0.015;
 
   void caller()
   {
@@ -29,7 +33,7 @@ class Player
     noStroke();
     fill(255);
     rectMode(CENTER);
-    rect(x, y, 50, 50);
+    rect(x, y, playerLength, playerLength);
     score += 1;
   }
 
@@ -39,11 +43,11 @@ class Player
     {
       if (mouseX > displayWidth/2)
       {
-        x += displayWidth*0.02;
+        x += move;
       }
       if (mouseX < displayWidth/2)
       {
-        x -= displayWidth*0.02;
+        x -= move;
       }
     }
   }
@@ -61,9 +65,9 @@ class Player
 
   void edgeDetect()
   {
-    leftEdge = x - 25;
-    rightEdge = x + 25;
-    topEdge = y - 25;
-    bottomEdge = y + 25;
+    leftEdge = x - playerLength/2;
+    rightEdge = x + playerLength/2;
+    topEdge = y - playerLength/2;
+    bottomEdge = y + playerLength/2;
   }
 }
