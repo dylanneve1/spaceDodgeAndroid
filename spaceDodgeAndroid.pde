@@ -2,7 +2,7 @@
 
 Menus menu;
 Player player;
-Troid[] troid = new Troid[2000];
+Troid[] troid = new Troid[1000];
 Flares[] flares = new Flares[50];
 
 void setup()

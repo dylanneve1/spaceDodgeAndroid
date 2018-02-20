@@ -65,7 +65,7 @@ class Menus
   {
     background(255, 0, 0);
     textSize(displayHeight*0.06);
-    fill(0);
+    fill(255);
     textAlign(CENTER);
     text("YOU DIED :P", displayWidth/2, displayHeight/2);
     textSize(displayHeight*0.03);

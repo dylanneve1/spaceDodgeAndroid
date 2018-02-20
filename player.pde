@@ -54,7 +54,7 @@ class Player
 
   void dead()
   {
-    if (lives == -1)
+    if (lives <= -1)
     {
       highScore = score;
       score = 0;

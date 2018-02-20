@@ -30,11 +30,11 @@ class Troid {
 
   void show() 
   {
-    strokeWeight(2);
+    strokeWeight(displayHeight*(1/250));
     stroke(138, 43, 226);
     fill(0, 200, 0);
-    rectMode(CENTER);
-    rect(x, y, r, r);
+    ellipseMode(CENTER);
+    ellipse(x, y, r, r);
   }
 
   void edgeDetect()
