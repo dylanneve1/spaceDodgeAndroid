@@ -26,6 +26,7 @@ class Player
     move();
     edgeDetect();
     dead();
+    restrict();
   }
 
   void show()
@@ -49,6 +50,18 @@ class Player
       {
         x -= move;
       }
+    }
+  }
+
+  void restrict()
+  {
+    if(rightEdge > displayWidth)
+    {
+      x -= move;
+    }
+    if(leftEdge < 0)
+    {
+      x += move;
     }
   }
 
