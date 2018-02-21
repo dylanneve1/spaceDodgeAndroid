@@ -27,6 +27,9 @@ void setup()
   for (int i = 0; i < flares.length; i++) {
     flares[i] = new Flares();
   }
+  for (int i = 0; i < life.length; i++) {
+    life[i] = new Life();
+  }
   size(displayWidth, displayHeight, P2D);
 }
 

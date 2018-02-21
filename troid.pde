@@ -64,7 +64,6 @@ class Troid {
     }
   }
 
-
   void boop()
   {
     if (collided == true)
