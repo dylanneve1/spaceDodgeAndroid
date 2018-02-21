@@ -9,8 +9,11 @@ PImage nebula;
 PImage ship;
 // PImage asteriod;
 
+PFont font;
+
 void setup()
 {
+  //font = loadFont("font.ttf");
   nebula = loadImage("nebula.jpg");
   ship = loadImage("ship.jpg");
   // asteriod = loadImage("asteroidSmall.jpg");

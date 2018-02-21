@@ -39,7 +39,8 @@ class Troid {
 
   void show() 
   {
-    fill(50, 150, 50);
+    noStroke();
+    fill(#8B4513);
     ellipseMode(CENTER);
     ellipse(x, y, r, r);
   }

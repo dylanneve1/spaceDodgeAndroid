@@ -25,6 +25,7 @@ class Menus
 
   void menu()
   {
+    //textFont(font);
     imageMode(CORNER);
     image(nebula, 0, 0, displayWidth, displayHeight);
     textAlign(CENTER);
@@ -42,6 +43,7 @@ class Menus
 
   void game()
   {
+    //textFont(font);
     imageMode(CORNER);
     image(nebula, 0, 0, displayWidth, displayHeight);
     textAlign(CENTER);
@@ -66,6 +68,7 @@ class Menus
 
   void dead()
   {
+    //textFont(font);
     background(255, 0, 0);
     textSize(displayHeight*0.06);
     fill(255);
