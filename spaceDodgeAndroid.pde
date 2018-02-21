@@ -4,6 +4,7 @@ Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
 Flares[] flares = new Flares[50];
+Life[] life = new Life[1];
 
 PImage nebula;
 PImage ship;
