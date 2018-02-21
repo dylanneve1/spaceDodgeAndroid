@@ -13,7 +13,6 @@ PFont font;
 
 void setup()
 {
-  //font = loadFont("font.ttf");
   nebula = loadImage("nebula.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
