@@ -39,10 +39,8 @@ class Troid {
 
   void show() 
   {
-    noStroke();
-    fill(#8B4513);
-    ellipseMode(CENTER);
-    ellipse(x, y, r, r);
+    imageMode(CENTER);
+    image(asteriod, x, y, r, r);
   }
 
   void edgeDetect()
