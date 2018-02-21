@@ -25,7 +25,7 @@ class Menus
 
   void menu()
   {
-    background(0);
+    image(nebula, 0, 0, displayWidth, displayHeight);
     textAlign(CENTER);
     fill(255);
     textSize(displayHeight*0.06);
@@ -41,7 +41,7 @@ class Menus
 
   void game()
   {
-    background(0);
+    image(nebula, 0, 0, displayWidth, displayHeight);
     textAlign(CENTER);
     fill(255);
     text("Lives : " + player.lives, displayWidth/2, displayHeight*0.2);

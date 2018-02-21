@@ -5,8 +5,11 @@ Player player;
 Troid[] troid = new Troid[1000];
 Flares[] flares = new Flares[50];
 
+PImage nebula;
+
 void setup()
 {
+  nebula = loadImage("nebula.jpg");
   orientation(PORTRAIT);
   menu = new Menus();
   frameRate(60);
