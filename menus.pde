@@ -30,7 +30,7 @@ class Menus
     textAlign(CENTER);
     fill(255);
     textSize(displayHeight*0.06);
-    text("SPACE DODGE", displayWidth/2, displayHeight*0.45);
+    text("Space Dodge", displayWidth/2, displayHeight*0.45);
     textSize(displayHeight*0.03);
     text("Tap to play...", displayWidth/2, displayHeight*0.55);
     if (mousePressed == true)
