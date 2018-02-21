@@ -27,7 +27,7 @@ void setup()
   for (int i = 0; i < flares.length; i++) {
     flares[i] = new Flares();
   }
-  size(displayWidth, displayHeight);
+  size(displayWidth, displayHeight, P2D);
 }
 
 void draw()
