@@ -6,13 +6,17 @@ Troid[] troid = new Troid[20];
 Flares[] flares = new Flares[50];
 
 PImage nebula;
+PImage ship;
+// PImage asteriod;
 
 void setup()
 {
   nebula = loadImage("nebula.jpg");
+  ship = loadImage("ship.jpg");
+  // asteriod = loadImage("asteroidSmall.jpg");
   orientation(PORTRAIT);
   menu = new Menus();
-  frameRate(60);
+  frameRate(120);
   player = new Player();
   for (int i = 0; i < troid.length; i++) {
     troid[i] = new Troid();

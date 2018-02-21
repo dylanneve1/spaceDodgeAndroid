@@ -39,9 +39,7 @@ class Troid {
 
   void show() 
   {
-    strokeWeight(displayHeight*(1/250));
-    stroke(138, 43, 226);
-    fill(0, 200, 0);
+    fill(50, 150, 50);
     ellipseMode(CENTER);
     ellipse(x, y, r, r);
   }

@@ -31,10 +31,8 @@ class Player
 
   void show()
   {
-    noStroke();
-    fill(255);
-    rectMode(CENTER);
-    rect(x, y, playerLength, playerLength);
+    imageMode(CENTER);
+    image(ship, x, y, playerLength, playerLength);
     score += 1;
   }
 
