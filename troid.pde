@@ -34,7 +34,7 @@ class Troid {
   void fall() 
   {
     y += yspeed;
-    //yspeed += displayHeight*0.000006;
+    yspeed += displayHeight*0.000012;
   }
 
   void show() 
