@@ -42,11 +42,11 @@ class Player
   {
     if (mousePressed == true)
     {
-      if (mouseX > displayWidth/2)
+      if (mouseX > displayWidth/2 && mouseY > displayHeight/2)
       {
         x += move;
       }
-      if (mouseX < displayWidth/2)
+      if (mouseX < displayWidth/2 && mouseY > displayHeight/2)
       {
         x -= move;
       }

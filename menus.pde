@@ -70,9 +70,9 @@ class Menus
     textAlign(CENTER);
     text("YOU DIED :P", displayWidth/2, displayHeight/2);
     textSize(displayHeight*0.03);
-    text("Tap to return to restart...", displayWidth/2, displayHeight*0.55);
+    text("Tap top to restart...", displayWidth/2, displayHeight*0.55);
     player.lives = 10;
-    if (mousePressed == true)
+    if (mousePressed == true && mouseY < displayHeight/2)
     {
       menuActive = true;
       gameActive = false;
