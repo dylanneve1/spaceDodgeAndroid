@@ -33,6 +33,7 @@ class Menus
     text("Space Dodge", displayWidth/2, displayHeight*0.45);
     textSize(displayHeight*0.03);
     text("Tap to play...", displayWidth/2, displayHeight*0.55);
+    text("Version : 2.5", displayWidth/2, displayHeight*0.8);
     if (mousePressed == true)
     {
       menuActive = false;
@@ -62,11 +63,11 @@ class Menus
       troid[i].boop();
       troid[i].respawn();
     }
-    for (int i = 0; i < life.length; i++) {
-      life[i].fall();
-      life[i].show();
-      life[i].respawn();
-    }
+    //for (int i = 0; i < life.length; i++) {
+    //  life[i].fall();
+    //  life[i].show();
+    //  life[i].respawn();
+    //}
   }
 
   void dead()

@@ -4,7 +4,7 @@ Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
 Flares[] flares = new Flares[50];
-Life[] life = new Life[1];
+//Life[] life = new Life[1];
 
 PImage nebula;
 PImage ship;
@@ -14,7 +14,7 @@ PFont font;
 
 void setup()
 {
-  nebula = loadImage("nebula.jpg");
+  nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
   orientation(PORTRAIT);
@@ -27,9 +27,9 @@ void setup()
   for (int i = 0; i < flares.length; i++) {
     flares[i] = new Flares();
   }
-  for (int i = 0; i < life.length; i++) {
-    life[i] = new Life();
-  }
+  //for (int i = 0; i < life.length; i++) {
+  //  life[i] = new Life();
+  //}
   size(displayWidth, displayHeight, P2D);
 }
 
