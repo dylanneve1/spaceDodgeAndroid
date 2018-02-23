@@ -47,12 +47,10 @@ class Player
     {
       if (mouseX > displayWidth/2 && mouseY > displayHeight/2 && moveLeft == false)
       {
-        //x += move;
         moveRight = true;
       }
       if (mouseX < displayWidth/2 && mouseY > displayHeight/2 && moveRight == false)
       {
-        //x -= move;
         moveLeft = true;
       }
     }
