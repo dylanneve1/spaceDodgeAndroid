@@ -15,10 +15,13 @@ class Player
 
   int score = 0;
   int highScore = 0;
-  
+
   float playerLength = displayWidth*0.1;
 
   float move = displayWidth*0.015;
+
+  boolean moveLeft = false;
+  boolean moveRight = false;
 
   void caller()
   {
@@ -27,6 +30,8 @@ class Player
     edgeDetect();
     dead();
     restrict();
+    executeMovementCommands();
+    mouseReleased();
   }
 
   void show()
@@ -40,24 +45,26 @@ class Player
   {
     if (mousePressed == true)
     {
-      if (mouseX > displayWidth/2 && mouseY > displayHeight/2)
+      if (mouseX > displayWidth/2 && mouseY > displayHeight/2 && moveLeft == false)
       {
-        x += move;
+        //x += move;
+        moveRight = true;
       }
-      if (mouseX < displayWidth/2 && mouseY > displayHeight/2)
+      if (mouseX < displayWidth/2 && mouseY > displayHeight/2 && moveRight == false)
       {
-        x -= move;
+        //x -= move;
+        moveLeft = true;
       }
     }
   }
 
   void restrict()
   {
-    if(rightEdge > displayWidth)
+    if (rightEdge > displayWidth)
     {
       x -= move;
     }
-    if(leftEdge < 0)
+    if (leftEdge < 0)
     {
       x += move;
     }
@@ -80,5 +87,23 @@ class Player
     rightEdge = x + playerLength/2;
     topEdge = y - playerLength/2;
     bottomEdge = y + playerLength/2;
+  }
+
+  void executeMovementCommands()
+  {
+    if (moveRight == true)
+    {
+      x += move;
+    }
+    if (moveLeft == true)
+    {
+      x -= move;
+    }
+  }
+
+  void mouseReleased()
+  {
+    moveLeft = false;
+    moveRight = false;
   }
 }
