@@ -73,6 +73,15 @@ class Player
     if (lives <= -1)
     {
       highScore = score;
+      if(highScore > loadedHighScore)
+      {
+        //byte sore = byte(highScore);
+        //byte[] savedScore = { sore, 1 };
+        //saveBytes("score.dat", savedScore);
+        String highScoreToSave = str(highScore);
+        String[] saved = split(highScoreToSave, ' ');
+        saveStrings("score.txt", saved);
+      }
       score = 0;
       menu.gameActive = false;
       menu.dead = true;

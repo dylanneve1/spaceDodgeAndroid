@@ -9,11 +9,16 @@ Flares[] flares = new Flares[50];
 PImage nebula;
 PImage ship;
 PImage asteriod;
+ 
+int loadedHighScore;
+
+String[] lines;
 
 PFont font;
 
 void setup()
 {
+  lines = loadStrings("score.txt");
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
@@ -35,5 +40,6 @@ void setup()
 
 void draw()
 {
+  loadedHighScore = int(lines[0]);
   menu.caller();
 }
