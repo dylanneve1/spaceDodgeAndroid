@@ -33,7 +33,7 @@ class Menus
     text("Space Dodge", displayWidth/2, displayHeight*0.45);
     textSize(displayHeight*0.03);
     text("Tap to play...", displayWidth/2, displayHeight*0.55);
-    text("Version : 2.5", displayWidth/2, displayHeight*0.8);
+    text("Version : 3.0", displayWidth/2, displayHeight*0.8);
     if (mousePressed == true)
     {
       menuActive = false;

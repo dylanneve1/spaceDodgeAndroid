@@ -28,13 +28,14 @@ class Troid {
     {
       y = random(displayHeight*-1, displayHeight*-0.1);
       x = random(displayWidth);
+      notYetTapped = true;
     }
   }
 
   void fall() 
   {
     y += yspeed;
-    //yspeed += displayHeight*0.0000012;
+    yspeed += displayHeight*0.0000012;
   }
 
   void show() 
@@ -57,7 +58,6 @@ class Troid {
     {
       if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge)
       {
-        //background(255);
         collided = true;
         notYetTapped = false;
       }
