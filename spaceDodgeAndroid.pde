@@ -11,6 +11,7 @@ PImage ship;
 PImage asteriod;
  
 int loadedHighScore;
+int shownHighScore;
 
 String[] lines;
 
@@ -19,6 +20,7 @@ PFont font;
 void setup()
 {
   lines = loadStrings("score.txt");
+  shownHighScore = int(lines[0]);
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");

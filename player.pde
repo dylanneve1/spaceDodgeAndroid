@@ -75,9 +75,7 @@ class Player
       highScore = score;
       if(highScore > loadedHighScore)
       {
-        //byte sore = byte(highScore);
-        //byte[] savedScore = { sore, 1 };
-        //saveBytes("score.dat", savedScore);
+        shownHighScore = highScore;
         String highScoreToSave = str(highScore);
         String[] saved = split(highScoreToSave, ' ');
         saveStrings("score.txt", saved);

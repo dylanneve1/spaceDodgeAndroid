@@ -49,7 +49,7 @@ class Menus
     fill(255);
     text("Lives : " + player.lives, displayWidth/2, displayHeight*0.2);
     text("Score : " + player.score, displayWidth/2, displayHeight*0.25);
-    text("High score : " + loadedHighScore, displayWidth/2, displayHeight*0.3);
+    text("High score : " + shownHighScore, displayWidth/2, displayHeight*0.3);
     player.caller();
     for (int i = 0; i < flares.length; i++) {
       flares[i].fall();
