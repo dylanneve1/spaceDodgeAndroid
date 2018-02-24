@@ -73,7 +73,7 @@ class Player
     if (lives <= -1)
     {
       highScore = score;
-      if(highScore > loadedHighScore)
+      if(highScore > shownHighScore)
       {
         shownHighScore = highScore;
         String highScoreToSave = str(highScore);

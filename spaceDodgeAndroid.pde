@@ -4,6 +4,10 @@ import java.io.File;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Vibrator;
+import android.view.KeyCharacterMap;
+import android.view.KeyCharacterMap.KeyData;
+import android.view.KeyEvent;
+import processing.sound.*;
 
 PrintWriter output;
 Activity act;
@@ -20,12 +24,9 @@ PImage nebula;
 PImage ship;
 PImage asteriod;
 
-int loadedHighScore;
 int shownHighScore;
 
 String[] lines;
-
-PFont font;
 
 File scoreFile;
 
@@ -62,6 +63,5 @@ void setup()
 
 void draw()
 {
-  // loadedHighScore = int(lines[0]);
   menu.caller();
 }
