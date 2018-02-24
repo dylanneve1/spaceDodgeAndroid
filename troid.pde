@@ -58,6 +58,8 @@ class Troid {
     {
       if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge)
       {
+        Vibrator vibrer = (Vibrator)   act.getSystemService(Context.VIBRATOR_SERVICE);
+        vibrer.vibrate(100);
         collided = true;
         notYetTapped = false;
       }

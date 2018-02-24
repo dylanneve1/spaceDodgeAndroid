@@ -1,5 +1,11 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
 
+import android.app.Activity;
+import android.content.Context;
+import android.os.Vibrator;
+
+Activity act;
+
 Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
@@ -38,6 +44,7 @@ void setup()
   //  life[i] = new Life();
   //}
   size(displayWidth, displayHeight, P2D);
+  act = this.getActivity();
 }
 
 void draw()
