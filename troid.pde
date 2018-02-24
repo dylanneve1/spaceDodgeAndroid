@@ -11,6 +11,8 @@ class Troid {
   float topEdge;
   float bottomEdge;
 
+  float ySpeedIncrease = 0;
+
   boolean notYetTapped = true;
   boolean collided = false;
 
@@ -35,7 +37,12 @@ class Troid {
   void fall() 
   {
     y += yspeed;
-    yspeed += displayHeight*0.0000012;
+    yspeed += ySpeedIncrease;
+    ySpeedIncrease += displayHeight*0.0000012;
+    if(menu.dead == true)
+    {
+      ySpeedIncrease = 0;
+    }
   }
 
   void show() 
