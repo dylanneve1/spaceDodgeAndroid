@@ -25,7 +25,7 @@ PFont font;
 
 void setup()
 {
-  lines = loadStrings("score.txt");
+  lines = loadStrings("/sdcard/SpaceDodge/score.txt");
   shownHighScore = int(lines[0]);
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
