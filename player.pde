@@ -78,7 +78,7 @@ class Player
         shownHighScore = highScore;
         String highScoreToSave = str(highScore);
         String[] saved = split(highScoreToSave, ' ');
-        saveStrings("/sdcard/SpaceDodge/score.txt", saved);
+        saveStrings(dataPath("score.txt"), saved);
       }
       score = 0;
       menu.gameActive = false;

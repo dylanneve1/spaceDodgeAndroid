@@ -31,9 +31,15 @@ File scoreFile;
 
 void setup()
 {
-  output = createWriter("/sdcard/SpaceDodge/score.txt");
-  lines = loadStrings("/sdcard/SpaceDodge/score.txt");
-  shownHighScore = int(lines[0]);
+  println(dataPath(" "));
+  try {
+    lines = loadStrings(dataPath("score.txt"));
+    shownHighScore = int(lines[0]);
+  }
+  catch(ArrayIndexOutOfBoundsException e) {
+    shownHighScore = 0;
+  }
+  // shownHighScore = int(lines[0]);
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
