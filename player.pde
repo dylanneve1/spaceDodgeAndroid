@@ -72,14 +72,14 @@ class Player
   {
     if (lives <= -1)
     {
-      highScore = score;
-      if(highScore > loadedHighScore)
-      {
-        shownHighScore = highScore;
-        String highScoreToSave = str(highScore);
-        String[] saved = split(highScoreToSave, ' ');
-        saveStrings("/sdcard/SpaceDodge/score.txt", saved);
-      }
+      //highScore = score;
+      //if(highScore > loadedHighScore)
+      //{
+      //  shownHighScore = highScore;
+      //  String highScoreToSave = str(highScore);
+      //  String[] saved = split(highScoreToSave, ' ');
+      //  saveStrings("score.txt", saved);
+      //}
       score = 0;
       menu.gameActive = false;
       menu.dead = true;

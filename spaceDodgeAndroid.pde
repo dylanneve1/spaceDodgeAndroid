@@ -1,9 +1,11 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
 
+import java.io.File;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Vibrator;
 
+PrintWriter output;
 Activity act;
 
 Menus menu;
@@ -12,21 +14,25 @@ Troid[] troid = new Troid[10];
 Flares[] flares = new Flares[50];
 //Life[] life = new Life[1];
 
+boolean scoreFileExists = false;
+
 PImage nebula;
 PImage ship;
 PImage asteriod;
- 
-int loadedHighScore;
-int shownHighScore;
 
-String[] lines;
+// int loadedHighScore;
+// int shownHighScore;
+
+// String[] lines;
 
 PFont font;
 
+File scoreFile;
+
 void setup()
 {
-  lines = loadStrings("/sdcard/SpaceDodge/score.txt");
-  shownHighScore = int(lines[0]);
+  // lines = loadStrings("score.txt");
+  // shownHighScore = int(lines[0]);
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
@@ -49,6 +55,6 @@ void setup()
 
 void draw()
 {
-  loadedHighScore = int(lines[0]);
+  // loadedHighScore = int(lines[0]);
   menu.caller();
 }
