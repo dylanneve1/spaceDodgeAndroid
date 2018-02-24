@@ -20,10 +20,10 @@ PImage nebula;
 PImage ship;
 PImage asteriod;
 
-// int loadedHighScore;
-// int shownHighScore;
+int loadedHighScore;
+int shownHighScore;
 
-// String[] lines;
+String[] lines;
 
 PFont font;
 
@@ -31,8 +31,9 @@ File scoreFile;
 
 void setup()
 {
-  // lines = loadStrings("score.txt");
-  // shownHighScore = int(lines[0]);
+  output = createWriter("/sdcard/SpaceDodge/score.txt");
+  lines = loadStrings("/sdcard/SpaceDodge/score.txt");
+  shownHighScore = int(lines[0]);
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
