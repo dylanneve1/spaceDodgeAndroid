@@ -76,9 +76,9 @@ class Player
       if(highScore > shownHighScore)
       {
         shownHighScore = score;
-        byte toSave = byte(shownHighScore);
-        byte toSaveArray[] = { toSave };
-        saveBytes(monFichier+"score.dat", toSaveArray);
+        //byte toSave = byte(shownHighScore);
+        //byte toSaveArray[] = { toSave };
+        //saveBytes(monFichier+"score.dat", toSaveArray);
       }
       score = 0;
       menu.gameActive = false;

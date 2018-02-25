@@ -33,14 +33,14 @@ File monFichier;
 
 void setup()
 {
-  monFichier = this.getActivity().getFilesDir();
-  try {
-    byte loadedHighScoreInBytes[] = loadBytes(monFichier+"/score.dat");
-    shownHighScore = int(loadedHighScoreInBytes[0]);
-  }
-  catch(ArrayIndexOutOfBoundsException e) {
-    shownHighScore = 0;
-  }
+  //monFichier = this.getActivity().getFilesDir();
+  //try {
+  //  byte loadedHighScoreInBytes[] = loadBytes(monFichier+"/score.dat");
+  //  shownHighScore = int(loadedHighScoreInBytes[0]);
+  //}
+  //catch(ArrayIndexOutOfBoundsException e) {
+  //  shownHighScore = 0;
+  //}
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
