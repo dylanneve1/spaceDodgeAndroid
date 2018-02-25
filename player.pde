@@ -73,12 +73,12 @@ class Player
     if (lives <= -1)
     {
       highScore = score;
-      if(highScore > loadedHighScore)
+      if(highScore > shownHighScore)
       {
-        shownHighScore = highScore;
+        shownHighScore = score;
         String highScoreToSave = str(highScore);
         String[] saved = split(highScoreToSave, ' ');
-        saveStrings(dataPath("score.txt"), saved);
+        saveStrings(sketchPath("score.txt"), saved);
       }
       score = 0;
       menu.gameActive = false;

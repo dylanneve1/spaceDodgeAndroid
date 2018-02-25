@@ -25,21 +25,23 @@ int shownHighScore;
 
 String[] lines;
 
+String data = dataPath("");
+
 PFont font;
 
 File scoreFile;
 
 void setup()
 {
+  println(sketchPath(" "));
   println(dataPath(" "));
   try {
-    lines = loadStrings(dataPath("score.txt"));
+    lines = loadStrings("score.txt");
     shownHighScore = int(lines[0]);
   }
   catch(ArrayIndexOutOfBoundsException e) {
     shownHighScore = 0;
   }
-  // shownHighScore = int(lines[0]);
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");

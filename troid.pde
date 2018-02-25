@@ -38,7 +38,7 @@ class Troid {
   {
     y += yspeed;
     yspeed += ySpeedIncrease;
-    ySpeedIncrease += displayHeight*0.0000012;
+    ySpeedIncrease += displayHeight*0.00000012;
     if(menu.dead == true)
     {
       ySpeedIncrease = 0;
