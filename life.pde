@@ -61,6 +61,7 @@ class Life
         notYetTapped = false;
         Vibrator vibrer = (Vibrator)   act.getSystemService(Context.VIBRATOR_SERVICE);
         vibrer.vibrate(100);
+        powerUp.play();
       }
     }
   }
