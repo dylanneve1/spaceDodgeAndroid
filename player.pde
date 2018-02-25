@@ -76,9 +76,9 @@ class Player
       if(highScore > shownHighScore)
       {
         shownHighScore = score;
-        String highScoreToSave = str(highScore);
-        String[] saved = split(highScoreToSave, ' ');
-        saveStrings(sketchPath("score.txt"), saved);
+        byte toSave = byte(shownHighScore);
+        byte toSaveArray[] = { toSave };
+        saveBytes(monFichier+"score.dat", toSaveArray);
       }
       score = 0;
       menu.gameActive = false;

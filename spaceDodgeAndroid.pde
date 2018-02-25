@@ -29,15 +29,14 @@ String data = dataPath("");
 
 PFont font;
 
-File scoreFile;
+File monFichier;
 
 void setup()
 {
-  println(sketchPath(" "));
-  println(dataPath(" "));
+  monFichier = this.getActivity().getFilesDir();
   try {
-    lines = loadStrings("score.txt");
-    shownHighScore = int(lines[0]);
+    byte loadedHighScoreInBytes[] = loadBytes(monFichier+"/score.dat");
+    shownHighScore = int(loadedHighScoreInBytes[0]);
   }
   catch(ArrayIndexOutOfBoundsException e) {
     shownHighScore = 0;
@@ -64,6 +63,5 @@ void setup()
 
 void draw()
 {
-  // loadedHighScore = int(lines[0]);
   menu.caller();
 }
