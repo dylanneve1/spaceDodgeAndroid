@@ -56,6 +56,7 @@ class Menus
       flares[i].show();
     }
     for (int i = 0; i < troid.length; i++) {
+      troid[i].reset();
       troid[i].fall();
       troid[i].show();
       troid[i].edgeDetect();
@@ -72,6 +73,7 @@ class Menus
 
   void dead()
   {
+    player.x = displayWidth/2;
     background(255, 0, 0);
     textSize(displayHeight*0.06);
     fill(255);
@@ -79,8 +81,6 @@ class Menus
     text("YOU DIED :P", displayWidth/2, displayHeight/2);
     textSize(displayHeight*0.03);
     text("Tap top to restart...", displayWidth/2, displayHeight*0.55);
-    player.x = 250;
-    player.lives = 10;
     if (mousePressed == true && mouseY < displayHeight/2)
     {
       menuActive = true;

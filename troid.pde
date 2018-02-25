@@ -37,12 +37,7 @@ class Troid {
   void fall() 
   {
     y += yspeed;
-    yspeed += ySpeedIncrease;
-    ySpeedIncrease += displayHeight*0.00000012;
-    if(menu.dead == true)
-    {
-      ySpeedIncrease = 0;
-    }
+    yspeed += displayHeight*0.0000012;
   }
 
   void show() 
@@ -80,6 +75,15 @@ class Troid {
       player.lives -= 1;
       background(255, 0, 0);
       collided = false;
+    }
+  }
+  
+  void reset()
+  {
+    if(menu.dead == true)
+    {
+      y  = random(displayHeight*-1, displayHeight*-0.1);
+      yspeed = displayHeight*0.012;
     }
   }
 }

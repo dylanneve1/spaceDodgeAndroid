@@ -81,6 +81,7 @@ class Player
         //saveBytes(monFichier+"score.dat", toSaveArray);
       }
       score = 0;
+      lives = 10;
       menu.gameActive = false;
       menu.dead = true;
     }
