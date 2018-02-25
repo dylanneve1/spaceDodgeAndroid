@@ -64,11 +64,14 @@ class Menus
       troid[i].boop();
       troid[i].respawn();
     }
-    //for (int i = 0; i < life.length; i++) {
-    //  life[i].fall();
-    //  life[i].show();
-    //  life[i].respawn();
-    //}
+    for (int i = 0; i < life.length; i++) {
+      life[i].fall();
+      life[i].show();
+      life[i].respawn();
+      life[i].edgeDetect();
+      life[i].collision();
+      life[i].getOneUp();
+    }
   }
 
   void dead()

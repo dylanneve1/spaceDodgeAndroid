@@ -4,6 +4,9 @@ import java.io.File;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Vibrator;
+import cassette.audiofiles.SoundFile;
+
+SoundFile bang;
 
 PrintWriter output;
 Activity act;
@@ -12,7 +15,7 @@ Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
 Flares[] flares = new Flares[50];
-//Life[] life = new Life[1];
+Life[] life = new Life[1];
 
 boolean scoreFileExists = false;
 
@@ -41,6 +44,7 @@ void setup()
   //catch(ArrayIndexOutOfBoundsException e) {
   //  shownHighScore = 0;
   //}
+  bang = new SoundFile(this, "bang.mp3");
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
@@ -54,9 +58,9 @@ void setup()
   for (int i = 0; i < flares.length; i++) {
     flares[i] = new Flares();
   }
-  //for (int i = 0; i < life.length; i++) {
-  //  life[i] = new Life();
-  //}
+  for (int i = 0; i < life.length; i++) {
+    life[i] = new Life();
+  }
   size(displayWidth, displayHeight, P2D);
   act = this.getActivity();
 }
