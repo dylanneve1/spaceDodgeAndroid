@@ -73,4 +73,12 @@ class Life
       collided = false;
     }
   }
+  
+  void reset()
+  {
+    if(menu.dead == true)
+    {
+      y  = random(displayHeight*-1, displayHeight*-0.1);
+    }
+  }
 }

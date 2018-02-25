@@ -71,6 +71,7 @@ class Menus
       life[i].edgeDetect();
       life[i].collision();
       life[i].getOneUp();
+      life[i].reset();
     }
   }
 
