@@ -8,8 +8,11 @@ class Menus
   boolean dead = false;
   boolean info = false;
 
+  boolean NOTWHENPRESSED = false;
+
   void caller()
   {
+    mouseReleased();
     if (menuActive == true)
     {
       menu();
@@ -38,12 +41,17 @@ class Menus
     text("Space Dodge", displayWidth/2, displayHeight*0.45);
     textSize(displayHeight*0.03);
     text("Play", displayWidth/2, displayHeight*0.55);
-    text("Upgrades", displayWidth/2, displayHeight*0.65);
-    text("Version : 3.0", displayWidth/2, displayHeight*0.8);
-    if (mousePressed == true)
+    text("Info", displayWidth/2, (displayHeight/10)*9);
+    // text("Version : 3.0", displayWidth/2, displayHeight*0.8);
+    if (NOTWHENPRESSED == false && mousePressed == true && mouseY < (displayHeight/8)*7)
     {
       menuActive = false;
       gameActive = true;
+      NOTWHENPRESSED = true;
+    } else if(NOTWHENPRESSED == false && mousePressed == true && mouseY > (displayHeight/8)*7) {
+      info = true;
+      menuActive = false;
+      NOTWHENPRESSED = true;
     }
   }
 
@@ -91,17 +99,29 @@ class Menus
     text("YOU DIED :P", displayWidth/2, displayHeight/2);
     textSize(displayHeight*0.03);
     text("Tap top to restart...", displayWidth/2, displayHeight*0.55);
-    if (mousePressed == true && mouseY < displayHeight/2)
+    if (NOTWHENPRESSED == false && mousePressed == true && mouseY < displayHeight/2)
     {
       menuActive = true;
       gameActive = false;
       dead = false;
+      NOTWHENPRESSED = true;
     }
   }
   
   void info()
   {
-    
-    
+    imageMode(CORNER);
+    image(nebula, 0, 0, displayWidth, displayHeight);
+    //text("INFO", displayWidth/2, displayHeight/2);
+    text("Back", displayWidth/2, (displayHeight/10)*9);
+    if(NOTWHENPRESSED == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
+      info = false;
+      menuActive = true;
+      NOTWHENPRESSED = true;
+    }
+  }
+  
+  void mouseReleased() {
+    NOTWHENPRESSED = false;
   }
 }
