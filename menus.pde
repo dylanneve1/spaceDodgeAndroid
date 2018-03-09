@@ -112,7 +112,11 @@ class Menus
   {
     imageMode(CORNER);
     image(nebula, 0, 0, displayWidth, displayHeight);
-    //text("INFO", displayWidth/2, displayHeight/2);
+    
+    text("Version : 3.0", displayWidth/2, (displayHeight/4));
+    text("Developer : dylanneve1", displayWidth/2, (displayHeight/4)*2);
+    text("Have fun :)", displayWidth/2, (displayHeight/4)*3);
+    
     text("Back", displayWidth/2, (displayHeight/10)*9);
     if(NOTWHENPRESSED == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
       info = false;
