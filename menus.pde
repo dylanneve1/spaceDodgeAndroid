@@ -6,6 +6,7 @@ class Menus
   boolean menuActive = true;
   boolean gameActive = false;
   boolean dead = false;
+  boolean info = false;
 
   void caller()
   {
@@ -21,6 +22,10 @@ class Menus
     {
       dead();
     }
+    if(info == true)
+    {
+      info();
+    }
   }
 
   void menu()
@@ -32,7 +37,8 @@ class Menus
     textSize(displayHeight*0.06);
     text("Space Dodge", displayWidth/2, displayHeight*0.45);
     textSize(displayHeight*0.03);
-    text("Tap to play...", displayWidth/2, displayHeight*0.55);
+    text("Play", displayWidth/2, displayHeight*0.55);
+    text("Upgrades", displayWidth/2, displayHeight*0.65);
     text("Version : 3.0", displayWidth/2, displayHeight*0.8);
     if (mousePressed == true)
     {
@@ -91,5 +97,11 @@ class Menus
       gameActive = false;
       dead = false;
     }
+  }
+  
+  void info()
+  {
+    
+    
   }
 }
