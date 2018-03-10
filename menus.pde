@@ -8,7 +8,7 @@ class Menus
   boolean deadActive = false;
   boolean infoActive = false;
 
-  boolean NOTWHENPRESSED = false;
+  boolean justDont = false;
 
   void caller()
   {
@@ -43,15 +43,15 @@ class Menus
     text("Play", displayWidth/2, displayHeight*0.55);
     text("Info", displayWidth/2, (displayHeight/10)*9);
     // text("Version : 3.0", displayWidth/2, displayHeight*0.8);
-    if (NOTWHENPRESSED == false && mousePressed == true && mouseY < (displayHeight/8)*7)
+    if (justDont == false && mousePressed == true && mouseY < (displayHeight/8)*7)
     {
       menuActive = false;
       gameActive = true;
-      NOTWHENPRESSED = true;
-    } else if(NOTWHENPRESSED == false && mousePressed == true && mouseY > (displayHeight/8)*7) {
+      justDont = true;
+    } else if(justDont == false && mousePressed == true && mouseY > (displayHeight/8)*7) {
       infoActive = true;
       menuActive = false;
-      NOTWHENPRESSED = true;
+      justDont = true;
     }
   }
 
@@ -99,12 +99,12 @@ class Menus
     text("YOU DIED :P", displayWidth/2, displayHeight/2);
     textSize(displayHeight*0.03);
     text("Tap top to restart...", displayWidth/2, displayHeight*0.55);
-    if (NOTWHENPRESSED == false && mousePressed == true && mouseY < displayHeight/2)
+    if (justDont == false && mousePressed == true && mouseY < displayHeight/2)
     {
       menuActive = true;
       gameActive = false;
       deadActive = false;
-      NOTWHENPRESSED = true;
+      justDont = true;
     }
   }
   
@@ -118,14 +118,14 @@ class Menus
     text("Have fun :)", displayWidth/2, (displayHeight/4)*3);
     
     text("Back", displayWidth/2, (displayHeight/10)*9);
-    if(NOTWHENPRESSED == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
+    if(justDont == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
       infoActive = false;
       menuActive = true;
-      NOTWHENPRESSED = true;
+      justDont = true;
     }
   }
   
   void mouseReleased() {
-    NOTWHENPRESSED = false;
+    justDont = false;
   }
 }
