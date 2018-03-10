@@ -5,8 +5,8 @@ class Menus
 
   boolean menuActive = true;
   boolean gameActive = false;
-  boolean dead = false;
-  boolean info = false;
+  boolean deadActive = false;
+  boolean infoActive = false;
 
   boolean NOTWHENPRESSED = false;
 
@@ -21,11 +21,11 @@ class Menus
     {
       game();
     }
-    if (dead == true)
+    if (deadActive == true)
     {
       dead();
     }
-    if(info == true)
+    if(infoActive == true)
     {
       info();
     }
@@ -49,7 +49,7 @@ class Menus
       gameActive = true;
       NOTWHENPRESSED = true;
     } else if(NOTWHENPRESSED == false && mousePressed == true && mouseY > (displayHeight/8)*7) {
-      info = true;
+      infoActive = true;
       menuActive = false;
       NOTWHENPRESSED = true;
     }
@@ -103,7 +103,7 @@ class Menus
     {
       menuActive = true;
       gameActive = false;
-      dead = false;
+      deadActive = false;
       NOTWHENPRESSED = true;
     }
   }
@@ -119,7 +119,7 @@ class Menus
     
     text("Back", displayWidth/2, (displayHeight/10)*9);
     if(NOTWHENPRESSED == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
-      info = false;
+      infoActive = false;
       menuActive = true;
       NOTWHENPRESSED = true;
     }
