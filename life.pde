@@ -77,7 +77,7 @@ class Life
   
   void reset()
   {
-    if(menu.dead == true)
+    if(menu.deadActive == true)
     {
       y  = random(displayHeight*-1, displayHeight*-0.1);
     }

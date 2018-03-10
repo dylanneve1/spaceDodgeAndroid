@@ -25,7 +25,7 @@ class Menus
     {
       dead();
     }
-    if(infoActive == true)
+    if (infoActive == true)
     {
       info();
     }
@@ -48,7 +48,7 @@ class Menus
       menuActive = false;
       gameActive = true;
       justDont = true;
-    } else if(justDont == false && mousePressed == true && mouseY > (displayHeight/8)*7) {
+    } else if (justDont == false && mousePressed == true && mouseY > (displayHeight/8)*7) {
       infoActive = true;
       menuActive = false;
       justDont = true;
@@ -107,24 +107,24 @@ class Menus
       justDont = true;
     }
   }
-  
+
   void info()
   {
     imageMode(CORNER);
     image(nebula, 0, 0, displayWidth, displayHeight);
-    
+
     text("Version : 3.0", displayWidth/2, (displayHeight/4));
     text("Developer : dylanneve1", displayWidth/2, (displayHeight/4)*2);
     text("Have fun :)", displayWidth/2, (displayHeight/4)*3);
-    
+
     text("Back", displayWidth/2, (displayHeight/10)*9);
-    if(justDont == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
+    if (justDont == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
       infoActive = false;
       menuActive = true;
       justDont = true;
     }
   }
-  
+
   void mouseReleased() {
     justDont = false;
   }
