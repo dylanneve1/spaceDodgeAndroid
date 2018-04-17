@@ -15,7 +15,7 @@ Activity act;
 Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
-Flares[] flares = new Flares[50];
+Flares[] flares = new Flares[30];
 Life[] life = new Life[1];
 
 boolean scoreFileExists = false;
