@@ -6,6 +6,7 @@ class Menus
   boolean menuActive = true;
   boolean gameActive = false;
   boolean deadActive = false;
+  boolean justDont = false;
 
   void caller()
   {
