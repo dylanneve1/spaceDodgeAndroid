@@ -7,7 +7,7 @@ import android.os.Vibrator;
 import cassette.audiofiles.SoundFile;
 
 SoundFile bang;
-SoundFile backgroundMusic;
+//SoundFile backgroundMusic;
 SoundFile powerUp;
 
 PrintWriter output;
@@ -47,7 +47,7 @@ void setup()
   //  shownHighScore = 0;
   //}
   powerUp = new SoundFile(this, "power.mp3");
-  backgroundMusic = new SoundFile(this, "background.mp3");
+  //backgroundMusic = new SoundFile(this, "background.mp3");
   bang = new SoundFile(this, "bang.mp3");
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
@@ -67,7 +67,7 @@ void setup()
   }
   size(displayWidth, displayHeight, P2D);
   act = this.getActivity();
-  backgroundMusic.loop();
+  //backgroundMusic.loop();
 }
 
 void draw()
