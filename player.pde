@@ -76,9 +76,6 @@ class Player
       if(highScore > shownHighScore)
       {
         shownHighScore = score;
-        //byte toSave = byte(shownHighScore);
-        //byte toSaveArray[] = { toSave };
-        //saveBytes(monFichier+"score.dat", toSaveArray);
       }
       score = 0;
       lives = 10;
