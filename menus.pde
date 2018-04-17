@@ -6,7 +6,6 @@ class Menus
   boolean menuActive = true;
   boolean gameActive = false;
   boolean deadActive = false;
-  boolean infoActive = false;
 
   boolean justDont = false;
 
@@ -25,10 +24,6 @@ class Menus
     {
       dead();
     }
-    if (infoActive == true)
-    {
-      info();
-    }
   }
 
   void menu()
@@ -41,17 +36,10 @@ class Menus
     text("Space Dodge", displayWidth/2, displayHeight*0.45);
     textSize(displayHeight*0.03);
     text("Play", displayWidth/2, displayHeight*0.55);
-    text("Info", displayWidth/2, (displayHeight/10)*9);
-    // text("Version : 3.0", displayWidth/2, displayHeight*0.8);
-    if (justDont == false && mousePressed == true && mouseY < (displayHeight/8)*7)
-    {
+    text("Version : 3.0", displayWidth/2, displayHeight*0.8);
+    if(mousePressed == true) {
       menuActive = false;
       gameActive = true;
-      justDont = true;
-    } else if (justDont == false && mousePressed == true && mouseY > (displayHeight/8)*7) {
-      infoActive = true;
-      menuActive = false;
-      justDont = true;
     }
   }
 
@@ -102,23 +90,6 @@ class Menus
       menuActive = true;
       gameActive = false;
       deadActive = false;
-      justDont = true;
-    }
-  }
-
-  void info()
-  {
-    imageMode(CORNER);
-    image(nebula, 0, 0, displayWidth, displayHeight);
-
-    text("Version : 3.0", displayWidth/2, (displayHeight/4));
-    text("Developer : dylanneve1", displayWidth/2, (displayHeight/4)*2);
-    text("Have fun :)", displayWidth/2, (displayHeight/4)*3);
-
-    text("Back", displayWidth/2, (displayHeight/10)*9);
-    if (justDont == false && mousePressed == true && mouseY > (displayHeight/10)*8) {
-      infoActive = false;
-      menuActive = true;
       justDont = true;
     }
   }
