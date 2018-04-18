@@ -60,11 +60,11 @@ class Player
   {
     if (rightEdge > displayWidth)
     {
-      x -= move;
+      x = displayWidth - playerLength/2;
     }
     if (leftEdge < 0)
     {
-      x += move;
+      x = 0 + playerLength/2;
     }
   }
 
