@@ -18,6 +18,17 @@ class Life
     y  = random(-500, -50);
   }
 
+  void call()
+  {
+    fall();
+    show();
+    respawn();
+    edgeDetect();
+    collision();
+    getOneUp();
+    reset();
+  }
+
   void fall() 
   {
     y += yspeed;

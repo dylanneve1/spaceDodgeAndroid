@@ -51,26 +51,13 @@ class Menus
     text("Lives : " + player.lives, displayWidth/2, displayHeight*0.2);
     player.caller();
     for (int i = 0; i < flares.length; i++) {
-      flares[i].fall();
-      flares[i].show();
+      flares[i].call();
     }
     for (int i = 0; i < troid.length; i++) {
-      troid[i].reset();
-      troid[i].fall();
-      troid[i].show();
-      troid[i].edgeDetect();
-      troid[i].collide();
-      troid[i].boop();
-      troid[i].respawn();
+      troid[i].call();
     }
     for (int i = 0; i < life.length; i++) {
-      life[i].fall();
-      life[i].show();
-      life[i].respawn();
-      life[i].edgeDetect();
-      life[i].collision();
-      life[i].getOneUp();
-      life[i].reset();
+      life[i].call();
     }
   }
 

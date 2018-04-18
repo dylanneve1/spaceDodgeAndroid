@@ -24,6 +24,17 @@ class Troid {
     y  = random(displayHeight*-1, displayHeight*-0.1);
   }
 
+  void call() {
+    reset();
+    respawn();
+    fall();
+    show();
+    edgeDetect();
+    collide();
+    boop();
+  }
+    
+
   void respawn()
   {
     if(y >= displayHeight + (displayHeight/2))

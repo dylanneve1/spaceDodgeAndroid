@@ -15,6 +15,11 @@ class Flares {
     yspeed  = map(z, 0, 20, 1, 20);
   }
 
+  void call() {
+    fall();
+    show();
+  }
+
   void fall() {
     y = y + yspeed;
     float grav = map(z, 0, 20, 0, 0.2);
