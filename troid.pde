@@ -1,6 +1,7 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
 
-class Troid {
+class Troid
+{
 
   float x;
   float y;
@@ -33,11 +34,11 @@ class Troid {
     collide();
     boop();
   }
-    
+
 
   void respawn()
   {
-    if(y >= displayHeight + (displayHeight/2))
+    if (y >= displayHeight + (displayHeight/2))
     {
       y = random(displayHeight*-1, displayHeight*-0.1);
       x = random(displayWidth);
@@ -89,10 +90,10 @@ class Troid {
       collided = false;
     }
   }
-  
+
   void reset()
   {
-    if(menu.deadActive == true)
+    if (menu.deadActive == true)
     {
       y  = random(displayHeight*-1, displayHeight*-0.1);
       yspeed = displayHeight*0.012;

@@ -36,7 +36,7 @@ class Menus
     textSize(displayHeight*0.03);
     text("Play", displayWidth/2, displayHeight*0.55);
     text("Version : 3.0", displayWidth/2, displayHeight*0.8);
-    if(mousePressed == true) {
+    if (mousePressed == true) {
       menuActive = false;
       gameActive = true;
     }
@@ -50,13 +50,16 @@ class Menus
     fill(255);
     text("Lives : " + player.lives, displayWidth/2, displayHeight*0.2);
     player.caller();
-    for (int i = 0; i < flares.length; i++) {
+    for (int i = 0; i < flares.length; i++)
+    {
       flares[i].call();
     }
-    for (int i = 0; i < troid.length; i++) {
+    for (int i = 0; i < troid.length; i++)
+    {
       troid[i].call();
     }
-    for (int i = 0; i < life.length; i++) {
+    for (int i = 0; i < life.length; i++)
+    {
       life[i].call();
     }
   }

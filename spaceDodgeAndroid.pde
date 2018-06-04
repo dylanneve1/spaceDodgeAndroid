@@ -41,27 +41,30 @@ void setup()
   //Init sound
   powerUp = new SoundFile(this, "power.mp3");
   bang = new SoundFile(this, "bang.mp3");
-  
+
   //Init pictures
   nebula = loadImage("back.jpg");
   ship = loadImage("ship.jpg");
   asteriod = loadImage("asteroid.jpg");
-  
+
   //Misc setup
   orientation(PORTRAIT);
   size(displayWidth, displayHeight, P2D);
   frameRate(120);
-  
+
   //Other
   menu = new Menus();
   player = new Player();
-  for (int i = 0; i < troid.length; i++) {
+  for (int i = 0; i < troid.length; i++)
+  {
     troid[i] = new Troid();
   }
-  for (int i = 0; i < flares.length; i++) {
+  for (int i = 0; i < flares.length; i++)
+  {
     flares[i] = new Flares();
   }
-  for (int i = 0; i < life.length; i++) {
+  for (int i = 0; i < life.length; i++)
+  {
     life[i] = new Life();
   }
   act = this.getActivity();

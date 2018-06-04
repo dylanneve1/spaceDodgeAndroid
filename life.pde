@@ -13,7 +13,8 @@ class Life
   boolean collided = false;
   boolean notYetTapped = true;
 
-  Life() {
+  Life()
+  {
     x  = random(width);
     y  = random(-500, -50);
   }
@@ -85,10 +86,10 @@ class Life
       collided = false;
     }
   }
-  
+
   void reset()
   {
-    if(menu.deadActive == true)
+    if (menu.deadActive == true)
     {
       y  = random(displayHeight*-1, displayHeight*-0.1);
     }
