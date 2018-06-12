@@ -22,7 +22,7 @@ class Troid
   Troid() 
   {
     x  = random(displayWidth);
-    y  = random(displayHeight*-1, displayHeight*-0.1);
+    y  = random(displayHeight*-2, displayHeight*-1);
   }
 
   void call() {
