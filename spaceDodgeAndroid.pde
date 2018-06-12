@@ -15,7 +15,6 @@ Activity act;
 Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
-Flares[] flares = new Flares[30];
 Life[] life = new Life[1];
 
 PImage nebula;
@@ -47,10 +46,6 @@ void setup()
   for (int i = 0; i < troid.length; i++)
   {
     troid[i] = new Troid();
-  }
-  for (int i = 0; i < flares.length; i++)
-  {
-    flares[i] = new Flares();
   }
   for (int i = 0; i < life.length; i++)
   {
