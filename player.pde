@@ -30,7 +30,7 @@ class Player
     edgeDetect();
     dead();
     restrict();
-    executeMovementCommands();
+    movementHandler();
     mouseReleased();
   }
 
@@ -92,7 +92,7 @@ class Player
     bottomEdge = y + playerLength/2;
   }
 
-  void executeMovementCommands()
+  void movementHandler()
   {
     if (moveRight == true)
     {
