@@ -10,7 +10,6 @@ import android.view.MotionEvent;
 SoundFile bang;
 SoundFile powerUp;
 
-PrintWriter output;
 Activity act;
 
 Menus menu;
@@ -19,22 +18,12 @@ Troid[] troid = new Troid[10];
 Flares[] flares = new Flares[30];
 Life[] life = new Life[1];
 
-boolean scoreFileExists = false;
-
 PImage nebula;
 PImage ship;
 PImage asteriod;
 
 int loadedHighScore;
 int shownHighScore;
-
-String[] lines;
-
-String data = dataPath("");
-
-PFont font;
-
-File monFichier;
 
 void setup()
 {
