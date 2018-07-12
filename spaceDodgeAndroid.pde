@@ -10,16 +10,12 @@ import android.view.MotionEvent;
 SoundFile bang;
 SoundFile powerUp;
 
-PrintWriter output;
 Activity act;
 
 Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
-Flares[] flares = new Flares[30];
 Life[] life = new Life[1];
-
-boolean scoreFileExists = false;
 
 PImage nebula;
 PImage ship;
@@ -27,14 +23,6 @@ PImage asteriod;
 
 int loadedHighScore;
 int shownHighScore;
-
-String[] lines;
-
-String data = dataPath("");
-
-PFont font;
-
-File monFichier;
 
 void setup()
 {
@@ -58,10 +46,6 @@ void setup()
   for (int i = 0; i < troid.length; i++)
   {
     troid[i] = new Troid();
-  }
-  for (int i = 0; i < flares.length; i++)
-  {
-    flares[i] = new Flares();
   }
   for (int i = 0; i < life.length; i++)
   {
