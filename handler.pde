@@ -1,4 +1,4 @@
-class exceptionHandler {
+class handler {
   
   void call() {
     
