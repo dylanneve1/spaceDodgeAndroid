@@ -1,3 +1,6 @@
-class Exception Handler {
-
+class exceptionHandler {
+  
+  void call() {
+    
+  }
 }

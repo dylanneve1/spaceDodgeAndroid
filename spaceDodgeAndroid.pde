@@ -12,6 +12,7 @@ SoundFile powerUp;
 
 Activity act;
 
+exceptionHandler eHandler;
 Menus menu;
 Player player;
 Troid[] troid = new Troid[10];
@@ -41,6 +42,7 @@ void setup()
   frameRate(120);
 
   //Other
+  eHandler = new exceptionHandler();
   menu = new Menus();
   player = new Player();
   for (int i = 0; i < troid.length; i++)
