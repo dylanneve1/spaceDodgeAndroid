@@ -23,7 +23,7 @@ class Player
   boolean moveLeft = false;
   boolean moveRight = false;
 
-  void caller()
+  void call()
   {
     show();
     move();

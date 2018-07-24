@@ -8,7 +8,7 @@ class Menus
   boolean deadActive = false;
   boolean justDont = false;
 
-  void caller()
+  void call()
   {
     mouseReleased();
     if (menuActive == true)
