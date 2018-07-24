@@ -14,8 +14,6 @@ class Player {
 
   // Player int variables.
   int lives = 10;
-  int score = 0;
-  int highScore = 0;
 
   // Player boolean variables.
   boolean moveLeft = false;
@@ -36,7 +34,6 @@ class Player {
   private void show() {
     imageMode(CENTER);
     image(ship, x, y, playerLength, playerLength);
-    score += 1;
   }
 
   // Takes raw movement input and toggles movement booleans to true if moving.

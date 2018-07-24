@@ -25,9 +25,6 @@ PImage nebula;
 PImage ship;
 PImage asteriod;
 
-int loadedHighScore;
-int shownHighScore;
-
 void setup() {
   //Init sound
   powerUp = new SoundFile(this, "media/power.mp3");
