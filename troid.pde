@@ -26,7 +26,7 @@ class Troid
   }
 
   // Call all sub-funtions.
-  void call() {
+  public void call() {
     reset();
     respawn();
     fall();
@@ -37,7 +37,7 @@ class Troid
   }
 
   // If the Troid has finished it's run across the screen respawn it at the top.
-  void respawn()
+  private void respawn()
   {
     if (y >= displayHeight + (displayHeight/2))
     {
@@ -48,21 +48,21 @@ class Troid
   }
 
   // Have the Troids fall over time and grow faster over time.
-  void fall() 
+  private void fall() 
   {
     y += yspeed;
     yspeed += displayHeight*0.0000012;
   }
 
   // Show Troid on screen.
-  void show() 
+  private void show() 
   {
     imageMode(CENTER);
     image(asteriod, x, y, r, r);
   }
 
   // Created values for the edge of troids.
-  void edgeDetect()
+  private void edgeDetect()
   {
     leftEdge = x - r/2;
     rightEdge = x + r/2;
@@ -71,7 +71,7 @@ class Troid
   }
 
   // Detect if the Troid has hit the player and output into collided variable.
-  void collide()
+  private void collide()
   {
     if (notYetTapped == true)
     {
@@ -86,7 +86,7 @@ class Troid
   }
 
   // If collided then...
-  void boop()
+  private void boop()
   {
     if (collided == true)
     {
@@ -98,7 +98,7 @@ class Troid
   }
 
   // Reset all data if game ends.
-  void reset()
+  private void reset()
   {
     if (menu.deadActive == true)
     {

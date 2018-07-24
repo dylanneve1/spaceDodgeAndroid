@@ -10,7 +10,7 @@ class Menus
   boolean justDont = false;
 
   // Call sub-function depending on what screen is active.
-  void call()
+  public void call()
   {
     mouseReleased();
     if (menuActive == true)
@@ -27,7 +27,7 @@ class Menus
     }
   }
 
-  void menu()
+  private void menu()
   {
     imageMode(CORNER);
     image(nebula, 0, 0, displayWidth, displayHeight);
@@ -45,7 +45,7 @@ class Menus
     }
   }
 
-  void game()
+  private void game()
   {
     imageMode(CORNER);
     image(nebula, 0, 0, displayWidth, displayHeight);
@@ -63,7 +63,7 @@ class Menus
     }
   }
 
-  void dead()
+  private void dead()
   {
     player.x = displayWidth/2;
     background(255, 0, 0);
@@ -82,7 +82,7 @@ class Menus
     }
   }
 
-  void mouseReleased() {
+  private void mouseReleased() {
     justDont = false;
   }
 }

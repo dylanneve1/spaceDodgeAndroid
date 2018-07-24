@@ -23,7 +23,7 @@ class Player
   boolean moveRight = false;
 
   // Call all sub-functions.
-  void call()
+  public void call()
   {
     show();
     move();
@@ -35,7 +35,7 @@ class Player
   }
 
   // Show player on screen.
-  void show()
+  private void show()
   {
     imageMode(CENTER);
     image(ship, x, y, playerLength, playerLength);
@@ -43,7 +43,7 @@ class Player
   }
 
   // Takes raw movement input and toggles movement booleans to true if moving.
-  void move()
+  private void move()
   {
     if (mousePressed == true)
     {
@@ -59,14 +59,14 @@ class Player
   }
 
   // Calls out of bounds handler.
-  void restrict()
+  private void restrict()
   {
     // Sent to handler.
     h.playerOutOfBoundsEvent();
   }
 
   // If player is dead end the game.
-  void dead()
+  private void dead()
   {
     if (lives <= -1)
     {
@@ -76,7 +76,7 @@ class Player
   }
 
   // Create values for the edges of the player.
-  void edgeDetect()
+  private void edgeDetect()
   {
     leftEdge = x - playerLength/2;
     rightEdge = x + playerLength/2;
@@ -85,13 +85,13 @@ class Player
   }
 
   // Takes movement booleans and outputs them to movement handler.
-  void outputMovementToHandler() {
+  private void outputMovementToHandler() {
     // Send to handler.
     h.playerMoveEvent(moveLeft, moveRight);
   }
 
   // If the mouse (touchscreen) is released reset movement booleans.
-  void mouseReleased()
+  private void mouseReleased()
   {
     moveLeft = false;
     moveRight = false;

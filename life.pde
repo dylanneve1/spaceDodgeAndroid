@@ -1,5 +1,6 @@
-class Life
-{
+// Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
+
+class Life {
 
   // Life float variables.
   float x;
@@ -23,7 +24,7 @@ class Life
   }
 
   // Call all sub-functions.
-  void call()
+  public void call()
   {
     fall();
     show();
@@ -35,13 +36,13 @@ class Life
   }
 
   // Make life fall over time.
-  void fall() 
+  private void fall() 
   {
     y += yspeed;
   }
 
   // Show life on screen.
-  void show()
+  private void show()
   {
     ellipseMode(CENTER);
     fill(0, 255, 0);
@@ -52,7 +53,7 @@ class Life
   }
 
   // Respawn when life has finished it's run.
-  void respawn()
+  private void respawn()
   {
     if (y >= displayHeight + (displayHeight/2))
     {
@@ -63,7 +64,7 @@ class Life
   }
 
   // Create values for edges of life entity.
-  void edgeDetect()
+  private void edgeDetect()
   {
     leftEdge = x - r/2;
     rightEdge = x + r/2;
@@ -72,7 +73,7 @@ class Life
   }
 
   // Detect if player has hit a life.
-  void collision()
+  private void collision()
   {
     if (notYetTapped == true)
     {
@@ -88,7 +89,7 @@ class Life
   }
 
   // Give player a life if collided and turn off colision.
-  void getOneUp()
+  private void getOneUp()
   {
     if (collided == true)
     {
@@ -99,7 +100,7 @@ class Life
   }
 
   // Reset all life data if game ends.
-  void reset()
+  private void reset()
   {
     if (menu.deadActive == true)
     {
