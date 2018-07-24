@@ -86,6 +86,7 @@ class Player
 
   // Takes movement booleans and outputs them to movement handler.
   void outputMovementToHandler() {
+    // Send to handler.
     h.playerMoveEvent(moveLeft, moveRight);
   }
 
