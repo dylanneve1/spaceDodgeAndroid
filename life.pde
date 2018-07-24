@@ -92,6 +92,7 @@ class Life
   {
     if (collided == true)
     {
+      // Send to handler.
       h.playerGetLifeEvent();
       collided = false;
     }
