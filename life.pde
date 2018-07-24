@@ -82,7 +82,7 @@ class Life
   {
     if (collided == true)
     {
-      player.lives += 1;
+      h.playerGetLifeEvent();
       collided = false;
     }
   }

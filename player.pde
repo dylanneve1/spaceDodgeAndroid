@@ -92,16 +92,8 @@ class Player
     bottomEdge = y + playerLength/2;
   }
 
-  void movementHandler()
-  {
-    if (moveRight == true)
-    {
-      x += move;
-    }
-    if (moveLeft == true)
-    {
-      x -= move;
-    }
+  void outputMovementToHandler() {
+    h.playerMoveEvent();
   }
 
   void mouseReleased()
