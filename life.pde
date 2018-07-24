@@ -1,5 +1,7 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
 
+// STABLE BRANCH
+
 class Life {
 
   // Life float variables.
