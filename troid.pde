@@ -3,28 +3,29 @@
 class Troid
 {
 
+  // Troid float variables.
   float x;
   float y;
   float yspeed = displayHeight*0.012;
-
+  float r = displayHeight*0.04;
   float rightEdge;
   float leftEdge;
   float topEdge;
   float bottomEdge;
-
   float ySpeedIncrease = 0;
 
+  // Troid boolean variables.
   boolean notYetTapped = true;
   boolean collided = false;
 
-  float r = displayHeight*0.04;
-
+  // Creates a random x and y for each generated Troid.
   Troid() 
   {
     x  = random(displayWidth);
     y  = random(displayHeight*-1, displayHeight*-0.1);
   }
 
+  // Call all sub-funtions.
   void call() {
     reset();
     respawn();
@@ -35,7 +36,7 @@ class Troid
     boop();
   }
 
-
+  // If the Troid has finished it's run across the screen respawn it at the top.
   void respawn()
   {
     if (y >= displayHeight + (displayHeight/2))
@@ -46,18 +47,21 @@ class Troid
     }
   }
 
+  // Have the Troids fall over time and grow faster over time.
   void fall() 
   {
     y += yspeed;
     yspeed += displayHeight*0.0000012;
   }
 
+  // Show Troid on screen.
   void show() 
   {
     imageMode(CENTER);
     image(asteriod, x, y, r, r);
   }
 
+  // Created values for the edge of troids.
   void edgeDetect()
   {
     leftEdge = x - r/2;
@@ -66,6 +70,7 @@ class Troid
     bottomEdge = y + r/2;
   }
 
+  // Detect if the Troid has hit the player and output into collided variable.
   void collide()
   {
     if (notYetTapped == true)
@@ -80,6 +85,7 @@ class Troid
     }
   }
 
+  // If collided then...
   void boop()
   {
     if (collided == true)
@@ -91,6 +97,7 @@ class Troid
     }
   }
 
+  // Reset all data if game ends.
   void reset()
   {
     if (menu.deadActive == true)

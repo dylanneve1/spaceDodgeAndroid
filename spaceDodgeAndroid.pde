@@ -58,5 +58,6 @@ void setup()
 
 void draw()
 {
+  // Call different menus.
   menu.call();
 }

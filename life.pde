@@ -1,24 +1,28 @@
 class Life
 {
+
+  // Life float variables.
   float x;
   float y;
   float yspeed = displayWidth*0.02;
   float r = displayHeight*0.04;
-
   float rightEdge;
   float leftEdge;
   float topEdge;
   float bottomEdge;
 
+  // Life boolean variables.
   boolean collided = false;
   boolean notYetTapped = true;
 
+  // Create random x and y for each life spawned.
   Life()
   {
     x  = random(width);
     y  = random(-500, -50);
   }
 
+  // Call all sub-functions.
   void call()
   {
     fall();
@@ -30,11 +34,13 @@ class Life
     reset();
   }
 
+  // Make life fall over time.
   void fall() 
   {
     y += yspeed;
   }
 
+  // Show life on screen.
   void show()
   {
     ellipseMode(CENTER);
@@ -45,6 +51,7 @@ class Life
     }
   }
 
+  // Respawn when life has finished it's run.
   void respawn()
   {
     if (y >= displayHeight + (displayHeight/2))
@@ -55,6 +62,7 @@ class Life
     }
   }
 
+  // Create values for edges of life entity.
   void edgeDetect()
   {
     leftEdge = x - r/2;
@@ -63,6 +71,7 @@ class Life
     bottomEdge = y + r/2;
   }
 
+  // Detect if player has hit a life.
   void collision()
   {
     if (notYetTapped == true)
@@ -78,6 +87,7 @@ class Life
     }
   }
 
+  // Give player a life if collided and turn off colision.
   void getOneUp()
   {
     if (collided == true)
@@ -87,6 +97,7 @@ class Life
     }
   }
 
+  // Reset all life data if game ends.
   void reset()
   {
     if (menu.deadActive == true)

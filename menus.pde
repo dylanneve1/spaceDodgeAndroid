@@ -3,11 +3,13 @@
 class Menus
 {
 
+  // Menu boolean variables.
   boolean menuActive = true;
   boolean gameActive = false;
   boolean deadActive = false;
   boolean justDont = false;
 
+  // Call sub-function depending on what screen is active.
   void call()
   {
     mouseReleased();
