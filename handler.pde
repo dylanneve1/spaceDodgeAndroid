@@ -29,4 +29,11 @@ class handler {
       player.x = 0 + player.playerLength/2;
     }
   }
+
+  // Handle what happens when player dies.
+  void playerDeadEvent() {
+    player.lives = 10;
+    menu.gameActive = false;
+    menu.deadActive = true;
+  }
 }

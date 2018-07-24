@@ -61,6 +61,7 @@ class Player
   // Calls out of bounds handler.
   void restrict()
   {
+    // Sent to handler.
     h.playerOutOfBoundsEvent();
   }
 
@@ -69,15 +70,8 @@ class Player
   {
     if (lives <= -1)
     {
-      highScore = score;
-      if (highScore > shownHighScore)
-      {
-        shownHighScore = score;
-      }
-      score = 0;
-      lives = 10;
-      menu.gameActive = false;
-      menu.deadActive = true;
+      // Send to handler.
+      h.playerDeadEvent();
     }
   }
 
