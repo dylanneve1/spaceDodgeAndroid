@@ -44,8 +44,8 @@ class Menus {
     image(nebula, 0, 0, displayWidth, displayHeight);
     textAlign(CENTER);
     fill(255);
-    text("Lives : " + player.lives, displayWidth/2, displayHeight*0.2);
-    player.call();
+    text("Lives : " + p.lives, displayWidth/2, displayHeight*0.2);
+    p.call();
     for (int i = 0; i < troid.length; i++) {
       troid[i].call();
     }
@@ -55,7 +55,7 @@ class Menus {
   }
 
   private void dead() {
-    player.x = displayWidth/2;
+    p.x = displayWidth/2;
     background(255, 0, 0);
     textSize(displayHeight*0.06);
     fill(255);

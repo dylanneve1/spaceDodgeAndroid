@@ -16,8 +16,8 @@ SoundFile powerUp;
 Activity act;
 
 handler h;
-Menus menu;
-Player player;
+Menus m;
+Player p;
 Troid[] troid = new Troid[10];
 Life[] life = new Life[1];
 
@@ -45,8 +45,8 @@ void setup() {
 
   //Other
   h = new handler();
-  menu = new Menus();
-  player = new Player();
+  m = new Menus();
+  p = new Player();
   for (int i = 0; i < troid.length; i++) {
     troid[i] = new Troid();
   }
@@ -58,5 +58,5 @@ void setup() {
 
 void draw() {
   // Call different menus.
-  menu.call();
+  m.call();
 }

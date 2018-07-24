@@ -66,7 +66,7 @@ class Troid {
   // Detect if the Troid has hit the player and output into collided variable.
   private void collide() {
     if (notYetTapped == true) {
-      if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge) {
+      if (leftEdge <= p.rightEdge && rightEdge >= p.leftEdge && bottomEdge >= p.topEdge && bottomEdge <= p.bottomEdge) {
         Vibrator vibrer = (Vibrator)   act.getSystemService(Context.VIBRATOR_SERVICE);
         vibrer.vibrate(100);
         collided = true;
@@ -79,7 +79,7 @@ class Troid {
   private void boop() {
     if (collided == true) {
       bang.play();
-      player.lives -= 1;
+      p.lives -= 1;
       background(255, 0, 0);
       collided = false;
     }
@@ -87,7 +87,7 @@ class Troid {
 
   // Reset all data if game ends.
   private void reset() {
-    if (menu.deadActive == true) {
+    if (m.deadActive == true) {
       y  = random(displayHeight*-1, displayHeight*-0.1);
       yspeed = displayHeight*0.012;
     }

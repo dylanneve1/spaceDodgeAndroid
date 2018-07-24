@@ -67,7 +67,7 @@ class Life {
   // Detect if player has hit a life.
   private void collision() {
     if (notYetTapped == true) {
-      if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge) {
+      if (leftEdge <= p.rightEdge && rightEdge >= p.leftEdge && bottomEdge >= p.topEdge && bottomEdge <= p.bottomEdge) {
         collided = true;
         notYetTapped = false;
         Vibrator vibrer = (Vibrator)   act.getSystemService(Context.VIBRATOR_SERVICE);
@@ -88,7 +88,7 @@ class Life {
 
   // Reset all life data if game ends.
   private void reset() {
-    if (menu.deadActive == true) {
+    if (m.deadActive == true) {
       y  = random(displayHeight*-1, displayHeight*-0.1);
     }
   }

@@ -4,33 +4,33 @@ class handler {
 
   // Is called if player collides with a life entity.
   public void playerGetLifeEvent() {
-    player.lives += 1;
+    p.lives += 1;
   }
 
   // Is called if player is in moving state.
   public void playerMoveEvent(boolean moveLeft, boolean moveRight) {
     if (moveRight == true) {
-      player.x += player.move;
+      p.x += p.move;
     }
     if (moveLeft == true) {
-      player.x -= player.move;
+      p.x -= p.move;
     }
   }
 
   // Kills player if out of bounds.
   public void playerOutOfBoundsEvent() {
-    if (player.rightEdge > displayWidth) {
-      player.x = displayWidth - player.playerLength/2;
+    if (p.rightEdge > displayWidth) {
+      p.x = displayWidth - p.playerLength/2;
     }
-    if (player.leftEdge < 0) {
-      player.x = 0 + player.playerLength/2;
+    if (p.leftEdge < 0) {
+      p.x = 0 + p.playerLength/2;
     }
   }
 
   // Handle what happens when player dies.
   public void playerDeadEvent() {
-    player.lives = 10;
-    menu.gameActive = false;
-    menu.deadActive = true;
+    p.lives = 10;
+    m.gameActive = false;
+    m.deadActive = true;
   }
 }
