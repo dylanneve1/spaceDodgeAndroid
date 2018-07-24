@@ -4,8 +4,11 @@ import java.io.File;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Vibrator;
+import android.os.Bundle;
 import cassette.audiofiles.SoundFile;
 import android.view.MotionEvent;
+import android.view.WindowManager;
+import android.view.*;
 
 SoundFile bang;
 SoundFile powerUp;
