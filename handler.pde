@@ -6,13 +6,13 @@ class handler {
   }
 
   // Is called if player is in moving state.
-  void playerMoveEvent()
+  void playerMoveEvent(boolean moveLeft, boolean moveRight)
   {
-    if (player.moveRight == true)
+    if (moveRight == true)
     {
       player.x += player.move;
     }
-    if (player.moveLeft == true)
+    if (moveLeft == true)
     {
       player.x -= player.move;
     }

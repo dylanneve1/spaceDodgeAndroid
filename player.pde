@@ -92,7 +92,7 @@ class Player
 
   // Takes movement booleans and outputs them to movement handler.
   void outputMovementToHandler() {
-    h.playerMoveEvent();
+    h.playerMoveEvent(moveLeft, moveRight);
   }
 
   // If the mouse (touchscreen) is released reset movement booleans.
