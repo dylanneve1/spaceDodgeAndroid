@@ -28,13 +28,13 @@ int shownHighScore;
 void setup()
 {
   //Init sound
-  powerUp = new SoundFile(this, "power.mp3");
-  bang = new SoundFile(this, "bang.mp3");
+  powerUp = new SoundFile(this, "media/power.mp3");
+  bang = new SoundFile(this, "media/bang.mp3");
 
   //Init pictures
-  nebula = loadImage("back.jpg");
-  ship = loadImage("ship.jpg");
-  asteriod = loadImage("asteroid.jpg");
+  nebula = loadImage("images/back.jpg");
+  ship = loadImage("images/ship.jpg");
+  asteriod = loadImage("images/asteroid.jpg");
 
   //Misc setup
   orientation(PORTRAIT);
