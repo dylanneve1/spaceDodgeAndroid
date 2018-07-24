@@ -1,9 +1,9 @@
 class handler {
-  
+
   void playerGetLifeEvent() {
-      player.lives += 1;
+    player.lives += 1;
   }
-  
+
   void playerMoveEvent()
   {
     if (player.moveRight == true)

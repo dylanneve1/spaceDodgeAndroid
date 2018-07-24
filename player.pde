@@ -30,7 +30,7 @@ class Player
     edgeDetect();
     dead();
     restrict();
-    movementHandler();
+    outputMovementToHandler();
     mouseReleased();
   }
 
