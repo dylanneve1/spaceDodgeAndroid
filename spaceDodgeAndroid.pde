@@ -28,8 +28,7 @@ PImage asteriod;
 int loadedHighScore;
 int shownHighScore;
 
-void setup()
-{
+void setup() {
   //Init sound
   powerUp = new SoundFile(this, "media/power.mp3");
   bang = new SoundFile(this, "media/bang.mp3");
@@ -48,19 +47,16 @@ void setup()
   h = new handler();
   menu = new Menus();
   player = new Player();
-  for (int i = 0; i < troid.length; i++)
-  {
+  for (int i = 0; i < troid.length; i++) {
     troid[i] = new Troid();
   }
-  for (int i = 0; i < life.length; i++)
-  {
+  for (int i = 0; i < life.length; i++) {
     life[i] = new Life();
   }
   act = this.getActivity();
 }
 
-void draw()
-{
+void draw() {
   // Call different menus.
   menu.call();
 }

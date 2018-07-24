@@ -17,15 +17,13 @@ class Life {
   boolean notYetTapped = true;
 
   // Create random x and y for each life spawned.
-  Life()
-  {
+  Life() {
     x  = random(width);
     y  = random(-500, -50);
   }
 
   // Call all sub-functions.
-  public void call()
-  {
+  public void call() {
     fall();
     show();
     respawn();
@@ -36,27 +34,22 @@ class Life {
   }
 
   // Make life fall over time.
-  private void fall() 
-  {
+  private void fall() {
     y += yspeed;
   }
 
   // Show life on screen.
-  private void show()
-  {
+  private void show() {
     ellipseMode(CENTER);
     fill(0, 255, 0);
-    if (notYetTapped == true)
-    {
+    if (notYetTapped == true) {
       ellipse(x, y, r, r);
     }
   }
 
   // Respawn when life has finished it's run.
-  private void respawn()
-  {
-    if (y >= displayHeight + (displayHeight/2))
-    {
+  private void respawn() {
+    if (y >= displayHeight + (displayHeight/2)) {
       y = random(displayHeight*-1, displayHeight*-0.1);
       x = random(displayWidth);
       notYetTapped = true;
@@ -64,8 +57,7 @@ class Life {
   }
 
   // Create values for edges of life entity.
-  private void edgeDetect()
-  {
+  private void edgeDetect() {
     leftEdge = x - r/2;
     rightEdge = x + r/2;
     topEdge = y - r/2;
@@ -73,12 +65,9 @@ class Life {
   }
 
   // Detect if player has hit a life.
-  private void collision()
-  {
-    if (notYetTapped == true)
-    {
-      if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge)
-      {
+  private void collision() {
+    if (notYetTapped == true) {
+      if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge) {
         collided = true;
         notYetTapped = false;
         Vibrator vibrer = (Vibrator)   act.getSystemService(Context.VIBRATOR_SERVICE);
@@ -89,10 +78,8 @@ class Life {
   }
 
   // Give player a life if collided and turn off colision.
-  private void getOneUp()
-  {
-    if (collided == true)
-    {
+  private void getOneUp() {
+    if (collided == true) {
       // Send to handler.
       h.playerGetLifeEvent();
       collided = false;
@@ -100,10 +87,8 @@ class Life {
   }
 
   // Reset all life data if game ends.
-  private void reset()
-  {
-    if (menu.deadActive == true)
-    {
+  private void reset() {
+    if (menu.deadActive == true) {
       y  = random(displayHeight*-1, displayHeight*-0.1);
     }
   }

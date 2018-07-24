@@ -1,7 +1,6 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
 
-class Player
-{
+class Player {
 
   // Player float variables.
   float x = displayWidth/2;
@@ -23,8 +22,7 @@ class Player
   boolean moveRight = false;
 
   // Call all sub-functions.
-  public void call()
-  {
+  public void call() {
     show();
     move();
     edgeDetect();
@@ -35,49 +33,40 @@ class Player
   }
 
   // Show player on screen.
-  private void show()
-  {
+  private void show() {
     imageMode(CENTER);
     image(ship, x, y, playerLength, playerLength);
     score += 1;
   }
 
   // Takes raw movement input and toggles movement booleans to true if moving.
-  private void move()
-  {
-    if (mousePressed == true)
-    {
-      if (mouseX > displayWidth/2 && mouseY > displayHeight/2 && moveLeft == false)
-      {
+  private void move() {
+    if (mousePressed == true) {
+      if (mouseX > displayWidth/2 && mouseY > displayHeight/2 && moveLeft == false) {
         moveRight = true;
       }
-      if (mouseX < displayWidth/2 && mouseY > displayHeight/2 && moveRight == false)
-      {
+      if (mouseX < displayWidth/2 && mouseY > displayHeight/2 && moveRight == false) {
         moveLeft = true;
       }
     }
   }
 
   // Calls out of bounds handler.
-  private void restrict()
-  {
+  private void restrict() {
     // Sent to handler.
     h.playerOutOfBoundsEvent();
   }
 
   // If player is dead end the game.
-  private void dead()
-  {
-    if (lives <= -1)
-    {
+  private void dead() {
+    if (lives <= -1) {
       // Send to handler.
       h.playerDeadEvent();
     }
   }
 
   // Create values for the edges of the player.
-  private void edgeDetect()
-  {
+  private void edgeDetect() {
     leftEdge = x - playerLength/2;
     rightEdge = x + playerLength/2;
     topEdge = y - playerLength/2;
@@ -91,8 +80,7 @@ class Player
   }
 
   // If the mouse (touchscreen) is released reset movement booleans.
-  private void mouseReleased()
-  {
+  private void mouseReleased() {
     moveLeft = false;
     moveRight = false;
   }

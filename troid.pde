@@ -1,7 +1,6 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
 
-class Troid
-{
+class Troid {
 
   // Troid float variables.
   float x;
@@ -19,8 +18,7 @@ class Troid
   boolean collided = false;
 
   // Creates a random x and y for each generated Troid.
-  Troid() 
-  {
+  Troid() {
     x  = random(displayWidth);
     y  = random(displayHeight*-1, displayHeight*-0.1);
   }
@@ -37,10 +35,8 @@ class Troid
   }
 
   // If the Troid has finished it's run across the screen respawn it at the top.
-  private void respawn()
-  {
-    if (y >= displayHeight + (displayHeight/2))
-    {
+  private void respawn() {
+    if (y >= displayHeight + (displayHeight/2)) {
       y = random(displayHeight*-1, displayHeight*-0.1);
       x = random(displayWidth);
       notYetTapped = true;
@@ -48,22 +44,19 @@ class Troid
   }
 
   // Have the Troids fall over time and grow faster over time.
-  private void fall() 
-  {
+  private void fall() {
     y += yspeed;
     yspeed += displayHeight*0.0000012;
   }
 
   // Show Troid on screen.
-  private void show() 
-  {
+  private void show() {
     imageMode(CENTER);
     image(asteriod, x, y, r, r);
   }
 
   // Created values for the edge of troids.
-  private void edgeDetect()
-  {
+  private void edgeDetect() {
     leftEdge = x - r/2;
     rightEdge = x + r/2;
     topEdge = y - r/2;
@@ -71,12 +64,9 @@ class Troid
   }
 
   // Detect if the Troid has hit the player and output into collided variable.
-  private void collide()
-  {
-    if (notYetTapped == true)
-    {
-      if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge)
-      {
+  private void collide() {
+    if (notYetTapped == true) {
+      if (leftEdge <= player.rightEdge && rightEdge >= player.leftEdge && bottomEdge >= player.topEdge && bottomEdge <= player.bottomEdge) {
         Vibrator vibrer = (Vibrator)   act.getSystemService(Context.VIBRATOR_SERVICE);
         vibrer.vibrate(100);
         collided = true;
@@ -86,10 +76,8 @@ class Troid
   }
 
   // If collided then...
-  private void boop()
-  {
-    if (collided == true)
-    {
+  private void boop() {
+    if (collided == true) {
       bang.play();
       player.lives -= 1;
       background(255, 0, 0);
@@ -98,10 +86,8 @@ class Troid
   }
 
   // Reset all data if game ends.
-  private void reset()
-  {
-    if (menu.deadActive == true)
-    {
+  private void reset() {
+    if (menu.deadActive == true) {
       y  = random(displayHeight*-1, displayHeight*-0.1);
       yspeed = displayHeight*0.012;
     }
