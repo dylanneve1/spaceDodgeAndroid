@@ -8,23 +8,8 @@ class handler {
   }
 
   // Is called if player is in moving state.
-  public void playerMoveEvent(boolean moveLeft, boolean moveRight) {
-    if (moveRight == true) {
-      p.x += p.move;
-    }
-    if (moveLeft == true) {
-      p.x -= p.move;
-    }
-  }
-
-  // Kills player if out of bounds.
-  public void playerOutOfBoundsEvent() {
-    if (p.rightEdge > displayWidth) {
-      p.x = displayWidth - p.playerLength/2;
-    }
-    if (p.leftEdge < 0) {
-      p.x = 0 + p.playerLength/2;
-    }
+  public void playerMoveEvent(float position) {
+    p.x = position;
   }
 
   // Handle what happens when player dies.
