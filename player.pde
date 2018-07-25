@@ -15,6 +15,9 @@ class Player {
   // Player int variables.
   int lives = 10;
 
+  // Player boolean variables.
+  boolean mounted = false;
+
   // Call all sub-functions.
   public void call() {
     show();
@@ -33,7 +36,12 @@ class Player {
   // Takes raw movement input and toggles movement booleans to true if moving.
   private void move() {
     // Send to handler.
-    h.playerMoveEvent(mouseX);
+    if (mousePressed && mouseX >= leftEdge && mouseX <= rightEdge) {
+      mounted = true;
+    }
+    if (mounted == true) {
+      h.playerMoveEvent(mouseX);
+    }
   }
 
   // If player is dead end the game.
@@ -50,5 +58,9 @@ class Player {
     rightEdge = x + playerLength/2;
     topEdge = y - playerLength/2;
     bottomEdge = y + playerLength/2;
+  }
+  
+  private void mouseReleased() {
+    mounted = false;
   }
 }
