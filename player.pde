@@ -4,7 +4,7 @@ class Player {
 
   // Player float variables.
   float x = displayWidth/2;
-  float y = displayHeight*0.9;
+  float y = displayHeight*0.8;
   float leftEdge;
   float rightEdge;
   float topEdge;
