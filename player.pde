@@ -26,7 +26,6 @@ class Player {
     edgeDetect();
     dead();
     restrict();
-    outputMovementToHandler();
     mouseReleased();
   }
 
@@ -38,14 +37,8 @@ class Player {
 
   // Takes raw movement input and toggles movement booleans to true if moving.
   private void move() {
-    if (mousePressed == true) {
-      if (mouseX > displayWidth/2 && mouseY > displayHeight/2 && moveLeft == false) {
-        moveRight = true;
-      }
-      if (mouseX < displayWidth/2 && mouseY > displayHeight/2 && moveRight == false) {
-        moveLeft = true;
-      }
-    }
+    // Send to handler.
+    h.playerMoveEvent(mouseX);
   }
 
   // Calls out of bounds handler.
@@ -68,12 +61,6 @@ class Player {
     rightEdge = x + playerLength/2;
     topEdge = y - playerLength/2;
     bottomEdge = y + playerLength/2;
-  }
-
-  // Takes movement booleans and outputs them to movement handler.
-  private void outputMovementToHandler() {
-    // Send to handler.
-    h.playerMoveEvent(moveLeft, moveRight);
   }
 
   // If the mouse (touchscreen) is released reset movement booleans.

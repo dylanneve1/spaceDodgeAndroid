@@ -31,7 +31,7 @@ class Menus {
     text("Space Dodge", displayWidth/2, displayHeight*0.45);
     textSize(displayHeight*0.03);
     text("Tap to play", displayWidth/2, displayHeight*0.55);
-    text("Version : 3.4", displayWidth/2, displayHeight*0.8);
+    text("Version : 3.4.1 Beta", displayWidth/2, displayHeight*0.8);
     text("By Dylan Neve", displayWidth/2, displayHeight*0.9);
     if (mousePressed == true) {
       menuActive = false;
