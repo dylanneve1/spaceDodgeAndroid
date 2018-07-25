@@ -15,17 +15,12 @@ class Player {
   // Player int variables.
   int lives = 10;
 
-  // Player boolean variables.
-  boolean moveLeft = false;
-  boolean moveRight = false;
-
   // Call all sub-functions.
   public void call() {
     show();
     move();
     edgeDetect();
     dead();
-    restrict();
     mouseReleased();
   }
 
@@ -39,12 +34,6 @@ class Player {
   private void move() {
     // Send to handler.
     h.playerMoveEvent(mouseX);
-  }
-
-  // Calls out of bounds handler.
-  private void restrict() {
-    // Sent to handler.
-    h.playerOutOfBoundsEvent();
   }
 
   // If player is dead end the game.
@@ -61,11 +50,5 @@ class Player {
     rightEdge = x + playerLength/2;
     topEdge = y - playerLength/2;
     bottomEdge = y + playerLength/2;
-  }
-
-  // If the mouse (touchscreen) is released reset movement booleans.
-  private void mouseReleased() {
-    moveLeft = false;
-    moveRight = false;
   }
 }
