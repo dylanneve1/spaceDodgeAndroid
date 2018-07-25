@@ -1,6 +1,6 @@
 // Copyright (C) 2018 Dylan Neve <dylanneve1@gmail.com>
 
-// BETA BRANCH (NOT STABLE)
+// STABLE BRANCH
 
 class Life {
 
