@@ -24,7 +24,6 @@ class Player {
     move();
     edgeDetect();
     dead();
-    mouseReleased();
   }
 
   // Show player on screen.
@@ -58,9 +57,5 @@ class Player {
     rightEdge = x + playerLength/2;
     topEdge = y - playerLength/2;
     bottomEdge = y + playerLength/2;
-  }
-  
-  private void mouseReleased() {
-    mounted = false;
   }
 }
