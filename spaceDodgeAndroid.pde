@@ -15,6 +15,7 @@ SoundFile powerUp;
 
 Activity act;
 
+mHandler mh;
 handler h;
 Menus m;
 Player p;
@@ -41,6 +42,7 @@ void setup() {
   frameRate(120);
 
   //Other
+  mh = new mHandler();
   h = new handler();
   m = new Menus();
   p = new Player();

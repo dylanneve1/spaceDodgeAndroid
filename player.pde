@@ -39,10 +39,10 @@ class Player {
   // Takes raw movement input and toggles movement booleans to true if moving.
   private void move() {
     if (mousePressed == true) {
-      if (mouseX > displayWidth/2 && mouseY > displayHeight/2 && moveLeft == false) {
+      if (mh.rightPressed()) {
         moveRight = true;
       }
-      if (mouseX < displayWidth/2 && mouseY > displayHeight/2 && moveRight == false) {
+      if (mh.leftPressed()) {
         moveLeft = true;
       }
     }
