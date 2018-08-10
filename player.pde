@@ -4,7 +4,7 @@ class Player {
 
   // Player float variables.
   float x = displayWidth/2;
-  float y = displayHeight*0.8;
+  float y = displayHeight*0.9;
   float leftEdge;
   float rightEdge;
   float topEdge;
@@ -16,7 +16,8 @@ class Player {
   int lives = 10;
 
   // Player boolean variables.
-  boolean mounted = false;
+  boolean moveLeft = false;
+  boolean moveRight = false;
 
   // Call all sub-functions.
   public void call() {
@@ -24,6 +25,9 @@ class Player {
     move();
     edgeDetect();
     dead();
+    restrict();
+    outputMovementToHandler();
+    mouseReleased();
   }
 
   // Show player on screen.
@@ -34,13 +38,20 @@ class Player {
 
   // Takes raw movement input and toggles movement booleans to true if moving.
   private void move() {
-    // Send to handler.
-    if (mousePressed && mouseX >= leftEdge && mouseX <= rightEdge) {
-      mounted = true;
+    if (mousePressed == true) {
+      if (mouseX > displayWidth/2 && mouseY > displayHeight/2 && moveLeft == false) {
+        moveRight = true;
+      }
+      if (mouseX < displayWidth/2 && mouseY > displayHeight/2 && moveRight == false) {
+        moveLeft = true;
+      }
     }
-    if (mounted == true) {
-      h.playerMoveEvent(mouseX);
-    }
+  }
+
+  // Calls out of bounds handler.
+  private void restrict() {
+    // Sent to handler.
+    h.playerOutOfBoundsEvent();
   }
 
   // If player is dead end the game.
@@ -57,5 +68,17 @@ class Player {
     rightEdge = x + playerLength/2;
     topEdge = y - playerLength/2;
     bottomEdge = y + playerLength/2;
+  }
+
+  // Takes movement booleans and outputs them to movement handler.
+  private void outputMovementToHandler() {
+    // Send to handler.
+    h.playerMoveEvent(moveLeft, moveRight);
+  }
+
+  // If the mouse (touchscreen) is released reset movement booleans.
+  private void mouseReleased() {
+    moveLeft = false;
+    moveRight = false;
   }
 }
