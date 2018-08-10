@@ -37,7 +37,7 @@ void setup() {
 
   //Misc setup
   orientation(PORTRAIT);
-  size(displayWidth, displayHeight, P2D);
+  fullScreen();
   frameRate(120);
 
   //Other
