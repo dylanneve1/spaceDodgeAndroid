@@ -57,7 +57,3 @@ void draw() {
   // Call different menus.
   m.call();
 }
-
-void mouseReleased() {
-  p.mounted = false;
-}
