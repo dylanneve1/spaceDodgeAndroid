@@ -45,6 +45,7 @@ class Menus {
     textAlign(CENTER);
     fill(255);
     text("Lives : " + p.lives, displayWidth/2, displayHeight*0.2);
+    text("Score : " + score, displayWidth/2, displayHeight*0.25);
     p.call();
     for (int i = 0; i < troid.length; i++) {
       troid[i].call();

@@ -25,7 +25,19 @@ PImage nebula;
 PImage ship;
 PImage asteriod;
 
+// Score stuff.
+String chemin = dataPath("");
+int score;
+
 void setup() {
+  // Try load score or set to 0.
+  try {
+    String[] scoreData = loadStrings(chemin + "score.txt");
+    score = int(scoreData[0]);
+  } catch(Exception e) {
+    score = 0;
+  }
+
   //Init sound
   powerUp = new SoundFile(this, "media/power.mp3");
   bang = new SoundFile(this, "media/bang.mp3");
@@ -57,3 +69,10 @@ void draw() {
   // Call different menus.
   m.call();
 }
+
+void stop() {
+  score = 21;
+  String[] list = split(Integer.toString(score), ' ');
+  saveStrings(dataPath("score.txt"), list);
+  System.out.println(dataPath(" "));
+} 
